@@ -1,0 +1,73 @@
+.why_choose_us_Hadding {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $primaryColor;
+    text-decoration: underline;
+}
+
+.why_choose_us_card {
+
+    .card {
+        height: 22rem;
+        width: auto;
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        transition: 0.5s ease-in-out;
+        padding: 5px;
+
+        .iconDiv {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            // margin-top: 2rem;
+            width: 5rem;
+            border: 5px solid $primaryColor;
+            border-radius: 50%;
+
+
+            i {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    .card:hover {
+        border: 1px solid $primaryColor;
+        transition: 0.5s ease-in-out;
+
+        &:hover {
+
+            .iconDiv {
+                background-color: $primaryColor;
+                transition: 0.5s ease-in-out;
+            }
+
+            i {
+                color: #ffff;
+            }
+        }
+    }
+
+
+
+
+    h5 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem !important;
+    }
+
+    .w_c_us_paragraph {
+
+        text-align: center;
+        justify-content: center;
+    }
+
+
+}

@@ -1,0 +1,60 @@
+@import url("bootstrap/dist/css/bootstrap.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Andada+Pro:wght@400;500;600;700;800&display=swap");
+@import url("remixicon/fonts/remixicon.css");
+@import url("slick-carousel/slick/slick.css");
+@import url("slick-carousel/slick/slick-theme.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css");
+@import url("react-toastify/dist/ReactToastify.css");
+
+$primaryColor: #17bf9e;
+$whiteColor: #fff;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section,
+footer {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.btn {
+  background-color: $primaryColor;
+  color: $whiteColor;
+  font-weight: 500;
+  padding: 7px, 15px;
+  border-radius: 50px;
+}
+
+.btn:hover {
+  color: $primaryColor;
+  border: 1px solid $primaryColor;
+}
+
+i {
+  color: $primaryColor;
+}
+
+p {
+  color: #596b65;
+  font-size: 1rem;
+  line-height: 30px;
+  font-family: "Andada Pro", serif;
+  font-weight: 400;
+  text-justify: inter-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 2rem;
+  line-height: 50px;
+  font-family: "Poppins", sans-serif;
+}

@@ -1,0 +1,76 @@
+footer {
+    // margin-top: 3rem;
+    background-color: rgba(226, 248, 248, 0.664);
+
+    h2,
+    h6 {
+        font-size: 25px;
+        font-weight: 550;
+    }
+
+
+    .follows {
+        span a {
+            text-decoration: none;
+            margin-right: 5px;
+            margin-top: 0 !important;
+
+            i {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    .list_link {
+        background: transparent !important;
+
+        .explore-link {
+            text-decoration: none;
+            color: #0a2b1e;
+        }
+
+        .explore-link:hover {
+            color: $primaryColor;
+            text-decoration: underline;
+            font-weight: 0;
+        }
+    }
+
+    .get_in_touch {
+
+        a {
+            text-decoration: none;
+            color: #0a2b1e;
+        }
+    }
+
+    .policy {
+        margin-top: 2rem;
+
+        p {
+            font-size: 15px;
+        }
+
+        a {
+            font-size: larger;
+            text-decoration: none;
+            list-style-type: none;
+            color: $primaryColor;
+            font-weight: 500;
+
+            &:hover {
+                text-decoration: underline;
+
+
+
+            }
+
+        }
+
+        .list_group {
+            .ListGroupItem {
+                color: $primaryColor;
+            }
+        }
+    }
+}

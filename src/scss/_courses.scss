@@ -1,0 +1,73 @@
+.coursHadding {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $primaryColor;
+    margin-top: 3rem;
+
+    h1 {
+        border-bottom: 2px solid;
+    }
+}
+
+.coursCard {
+
+    .card {
+        height: 27rem;
+        width: auto;
+        margin-top: 2rem;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // text-align: center;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        transition: 0.5s ease-in-out;
+
+
+        h5 {
+            margin-left: 4px;
+            font-size: 30px;
+            color: $primaryColor;
+        }
+
+        p {
+            padding-left: 4px;
+
+        }
+
+        p {
+            text-align: center;
+            text-justify: center;
+            padding: 2px;
+        }
+
+        .card-img-top {
+            object-fit: cover;
+        }
+
+        // .enroll_now {
+        //     text-decoration: none;
+        //     color: $primaryColor;
+        //     font-weight: 800;
+        //     font-size: 1rem;
+
+        // }
+
+        // .enroll_now:hover {
+        //     // text-decoration: underline;
+        // }
+
+        .zoom {
+            overflow: hidden;
+        }
+
+        .zoom img {
+            transition: all 1.3s ease;
+        }
+
+        .zoom:hover img {
+            transform: scale(1.3);
+        }
+    }
+
+}

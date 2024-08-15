@@ -1,0 +1,70 @@
+.contactBg {
+    margin-top: 5rem;
+    width: 100%;
+    background-color: rgba(226, 248, 248, 0.664);
+
+    .card {
+        margin-top: 5rem !important;
+        margin-bottom: 5rem !important;
+        height: auto;
+        margin: 0 auto;
+
+        .contactHadding {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $primaryColor;
+
+            h1 {
+                text-align: center;
+                border-bottom: 2px solid $primaryColor;
+                margin-top: 3rem;
+            }
+        }
+
+        .conatacDiv {
+            margin: 0 auto;
+            width: 80%;
+
+
+            .form-floating {
+                margin-top: 2rem;
+
+                .form-control:focus {
+                    border-color: $primaryColor;
+                    box-shadow: 0 0 0 0.1rem #8ebdb1;
+                }
+
+                .error-msg {
+                    margin: 0;
+                    padding: 0%;
+                    color: red;
+                }
+            }
+        }
+
+        .submit_btn {
+            display: flex;
+            align-items: center;
+            justify-content: center !important;
+            margin: 2rem 0 2rem;
+        }
+
+
+    }
+
+    @media only screen and (min-width: 1200px) {
+
+        .card {
+            width: 70%;
+        }
+    }
+
+    @media only screen and (max-width: 1000px) {
+
+        .card {
+            width: 100%;
+        }
+    }
+
+}

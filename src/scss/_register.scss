@@ -1,0 +1,91 @@
+.bg_Color {
+    background-color: rgba(226, 248, 248, 0.664);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+
+    .card {
+        margin-top: 7rem !important;
+        margin-bottom: 5rem !important;
+        // width: 80%;
+        height: auto;
+        margin: 0 auto;
+
+        .contactHadding {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $primaryColor;
+
+            h1 {
+                text-align: center;
+                border-bottom: 2px solid $primaryColor;
+
+            }
+        }
+
+        .conatacDiv {
+            margin: 0 auto;
+            width: 80%;
+
+
+            .form-floating {
+                margin-top: 2rem;
+
+                .form-control:focus {
+                    border-color: $primaryColor;
+                    box-shadow: 0 0 0 0.1rem #8ebdb1;
+                }
+
+                .form-select:focus {
+                    border-color: $primaryColor ;
+                    box-shadow: 0 0 0 0.1rem #8ebdb1;
+
+                }
+
+                .error-msg {
+                    margin: 0;
+                    padding: 0%;
+                    color: red;
+                }
+            }
+
+            .register_btn {
+                display: flex;
+                align-items: center;
+                justify-content: center !important;
+                margin: 2rem 0 2rem;
+            }
+        }
+
+        .back_to_home {
+            padding: 2rem;
+            margin-bottom: 0;
+
+            i {
+                font-size: 1.2rem;
+            }
+
+            .back_to_home_link {
+                color: $primaryColor;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 500px) {
+
+    .card {
+        width: 70%;
+    }
+}
+// @media only screen and (max-width: 1200) {
+
+//     .card {
+//         width: 70%;
+//     }
+    
+// }

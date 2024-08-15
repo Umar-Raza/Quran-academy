@@ -1,0 +1,89 @@
+.header {
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    background-color: #fff;
+    // /* From https://css.glass */
+    // background: rgba(226, 248, 248, 0.73);
+    // // border-radius: 16px;
+    // // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    // backdrop-filter: blur(10px);
+    // -webkit-backdrop-filter: blur(10px);
+    // // border: 1px solid rgba(226, 248, 248, 0.3);
+
+    .nav_list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        column-gap: 1.3rem;
+
+        a {
+            font-weight: 500;
+            font-size: 1.1rem;
+            color: #0a2b1e;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            color: $primaryColor;
+
+        }
+    }
+}
+
+.nav-right p {
+    font-weight: 500;
+    color: #0a2b1e;
+    font-size: 1.1rem;
+}
+
+.nav-right p i {
+    font-size: 1.3rem;
+}
+
+.mobile_menu {
+    display: none;
+
+}
+
+
+@media only screen and (max-width:991px) {
+    .nav_menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #0a2b1eb2;
+        width: 100%;
+        height: 100% !important;
+        z-index: 99;
+        display: none;
+    }
+
+    .nav_list {
+        position: absolute;
+        background-color: #fff !important;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 999;
+        padding-top: 80px !important;
+    }
+
+    .mobile_menu {
+        display: block;
+    }
+
+    .nav_right {
+        display: none;
+    }
+
+    .active_menu {
+        display: block;
+    }
+}
