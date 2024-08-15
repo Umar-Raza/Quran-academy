@@ -77,3 +77,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 "# Quran_Academy" 
 "# Quran_Academy" 
 "# Quran-academy" 
+"# Quran-academy" 
