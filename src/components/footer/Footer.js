@@ -70,7 +70,7 @@ export default function Footer() {
             <h6 >Explore</h6>
             <ListGroup className='list_group'>
               {FooterQuickLink.map((item, index) => (
-                <ListGroupItem key={index} className='border-0 ps-0 list_link'>
+                <ListGroupItem key={index} className='border-0 bold ps-0 list_link'>
                   {""}
                   <a className='explore-link' href={item.url}>{item.display}</a>
                 </ListGroupItem>

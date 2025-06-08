@@ -23,16 +23,18 @@ footer {
 
     .list_link {
         background: transparent !important;
-
+        font-weight: 500;
         .explore-link {
             text-decoration: none;
             color: #0a2b1e;
+
         }
 
         .explore-link:hover {
             color: $primaryColor;
             text-decoration: underline;
             font-weight: 0;
+
         }
     }
 
@@ -49,6 +51,7 @@ footer {
 
         p {
             font-size: 15px;
+
         }
 
         a {
