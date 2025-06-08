@@ -102,7 +102,7 @@ export default function Footer() {
           <hr className='mt-3' />
           <Col lg="12">
             <div className="policy">
-              <p className=' m-0 text-center'>&copy;{year} All Rights reserved. Designed By <a href="mu-portfolio.web.app">Muhammad Umar.</a></p>
+              <p className=' m-0 text-center'>&copy;{year} All Rights reserved. Designed By <a href="https://mu-portfolio.web.app/" target='blank'>Muhammad Umar.</a></p>
             </div>
           </Col>
         </Row>

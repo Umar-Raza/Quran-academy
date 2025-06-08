@@ -18,13 +18,14 @@ function App() {
 
   return (
     <>
-      {loading ? 
+      {/* {loading ? 
         <PreLoader />
-       : 
-        <BrowserRouter>
-          <Routes />
-        </BrowserRouter>
-      }
+       :  */}
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
+      {/* } */}
+
       <ToastContainer
         position="top-center"
         autoClose={3000}

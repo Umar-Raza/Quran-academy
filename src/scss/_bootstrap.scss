@@ -7,7 +7,7 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css");
 @import url("react-toastify/dist/ReactToastify.css");
 
-$primaryColor: #17bf9e;
+$primaryColor: #2d5a3d;
 $whiteColor: #fff;
 
 * {
@@ -28,6 +28,16 @@ footer {
   font-weight: 500;
   padding: 7px, 15px;
   border-radius: 50px;
+}
+
+.freeTrailBtn {
+  text-decoration: none;
+  color: $whiteColor;
+}
+
+.exploreCourseBtn {
+  text-decoration: none;
+  color: $whiteColor;
 }
 
 .btn:hover {
@@ -56,5 +66,9 @@ h5,
 h6 {
   font-size: 2rem;
   line-height: 50px;
+  font-family: "Poppins", sans-serif;
+}
+
+p{
   font-family: "Poppins", sans-serif;
 }

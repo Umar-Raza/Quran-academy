@@ -4,12 +4,7 @@ import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const [isProcessing, setIsProcessing] = useState(false);
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm();
+  const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
   const sendMessage = (formData) => {
     setIsProcessing(true);
@@ -24,12 +19,10 @@ export default function Contact() {
         (result) => {
           setIsProcessing(false);
           window.toastify("Your massage successfully send.", "success");
-
           reset();
         },
         (error) => {
           setIsProcessing(false);
-
           window.toastify(
             "Something went wrong while sending Message.",
             "error"
@@ -42,7 +35,7 @@ export default function Contact() {
     <div className="contactBg">
       <div className="container" id="contact">
         <div className="row">
-          <div className="col-12">
+          <div className="col-12 mt-3">
             <div className="card">
               <div className="contactHadding">
                 <h1>CONTACT</h1>

@@ -19,7 +19,7 @@
         column-gap: 1.3rem;
 
         a {
-            font-weight: 500;
+            font-weight: bolder;
             font-size: 1.1rem;
             color: #0a2b1e;
             text-decoration: none;
@@ -28,7 +28,6 @@
 
         a:hover {
             color: $primaryColor;
-
         }
     }
 }
@@ -86,4 +85,18 @@
     .active_menu {
         display: block;
     }
+
+
+}
+
+
+
+.freeTrailBtn {
+    text-decoration: none;
+    color: $whiteColor;
+}
+
+.exploreCourseBtn {
+    text-decoration: none;
+    color: $whiteColor;
 }

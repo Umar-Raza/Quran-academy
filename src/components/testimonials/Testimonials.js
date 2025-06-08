@@ -13,9 +13,9 @@ export default function Testimonials() {
     <div className="container">
       <div className="row">
         <h2 className="testimonials_hadding mt-5 mb-3">Our Student Voice</h2>
-        <div className="col-sm-12 m-auto mt-3">
-          <div className="testimonials_content W-50">
-            <Slider {...settings}>
+        <div className="col-12 col-md-6 m-auto mt-3">
+          <div className="testimonials_content ">
+            <Slider {...settings} className="w-100 overflow-hidden">
               <div>
                 <div className="single_testimonial">
                   <p>

@@ -5,7 +5,7 @@ export default function Header() {
     const menuRef = useRef();
     const menuToggle = () => menuRef.current.classList.toggle("active_menu")
     return (
-        <header className='header sticky-top'>
+        <header className='header sticky-top shadow'>
             <div className="container">
                 <div className="navigation d-flex align-items-center justify-content-between">
                     <div className="logo">
