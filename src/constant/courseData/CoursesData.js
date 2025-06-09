@@ -13,10 +13,10 @@ const CoursesData = [
     paragaraph:
       "Learn Quran  with Quran Nazra (Quran reading) and become a reciter of Quran with proper pronunciation and correct origins.",
     enroll: (
-      <Link className="btn" to="/registration">
+      <Link className="btn w-50 " to="/registration">
         Apply Now
       </Link>
-    ), 
+    ),
   },
   {
     img: Tarjama,
@@ -24,10 +24,9 @@ const CoursesData = [
     paragaraph:
       "An opportunity to learn Quran translation (Quran Tarjuma) and get to know the rulings and commandments of Almighty in the Quran.",
     enroll: (
-      
-        <Link className="btn btn" to="/registration">
-          Apply Now
-        </Link>
+      <Link className="btn w-50" to="/registration">
+        Apply Now
+      </Link>
     ),
   },
   {
@@ -36,7 +35,7 @@ const CoursesData = [
     paragaraph:
       "In this course the students will read explanation of Quran.And they will receive extra attention from  qualified teachers.",
     enroll: (
-      <Link className="btn" to="/registration">
+      <Link className="btn w-50" to="/registration">
         Apply Now
       </Link>
     ),
@@ -48,7 +47,7 @@ const CoursesData = [
     paragaraph:
       "In this course you will be able to learn the complete method of Prayers (Namaz). Whatever will be taught about prayer in the Quran and hadiths",
     enroll: (
-      <Link className="btn" to="/registration">
+      <Link className="btn w-50" to="/registration">
         Apply Now
       </Link>
     ),
@@ -59,7 +58,7 @@ const CoursesData = [
     paragaraph:
       "In this Farz Uloom course, you will learn the basic fundamental rulings of Sharia via book which is obligatory for every sane male and female.",
     enroll: (
-      <Link className="btn" to="/registration">
+      <Link className="btn w-50" to="/registration">
         Apply Now
       </Link>
     ),
@@ -70,7 +69,7 @@ const CoursesData = [
     paragaraph:
       "Encourage your children to learn duas from a very young age. Our Dua Book consists of numerous duas that your kids should start memorizing at an early age.",
     enroll: (
-      <Link className="btn" to="/registration">
+      <Link className="btn w-50" to="/registration">
         Apply Now
       </Link>
     ),

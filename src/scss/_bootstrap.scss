@@ -6,6 +6,8 @@
 @import url("slick-carousel/slick/slick-theme.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css");
 @import url("react-toastify/dist/ReactToastify.css");
+@import url("react-toastify/dist/ReactToastify.css");
+@import "bootstrap-icons/font/bootstrap-icons";
 
 $primaryColor: #2d5a3d;
 $whiteColor: #fff;
@@ -22,12 +24,15 @@ footer {
   padding-bottom: 70px;
 }
 
+
 .btn {
-  background-color: $primaryColor;
-  color: $whiteColor;
+  color: $primaryColor;
   font-weight: 500;
   padding: 7px, 15px;
-  border-radius: 50px;
+  border: 1px solid $primaryColor;
+  // border-radius: 50px;
+  text-decoration: none;
+
 }
 
 .freeTrailBtn {
@@ -41,8 +46,12 @@ footer {
 }
 
 .btn:hover {
-  color: $primaryColor;
-  border: 1px solid $primaryColor;
+  i {
+    color: $whiteColor;
+  }
+
+  color: $whiteColor;
+  background-color: $primaryColor;
 }
 
 i {
@@ -69,6 +78,6 @@ h6 {
   font-family: "Poppins", sans-serif;
 }
 
-p{
+p {
   font-family: "Poppins", sans-serif;
 }
