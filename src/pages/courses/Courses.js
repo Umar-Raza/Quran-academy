@@ -41,7 +41,9 @@ export default function Courses() {
                 <div className="col-md-7">
                   <div className="card-body d-flex flex-column  h-100">
                     <div>
-                      <h5 className="card-title text-center">{items.hadding}</h5>
+                      <h5 className="card-title text-center">
+                        {items.hadding}
+                      </h5>
                       {/* <h6 className="card-subtitle mb-2 text-muted">
                         <i className="bi bi-calendar-event me-2"></i>
                         {post.date}

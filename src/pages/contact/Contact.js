@@ -4,7 +4,12 @@ import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const [isProcessing, setIsProcessing] = useState(false);
-  const { register, handleSubmit, reset, formState: { errors } } = useForm();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
 
   const sendMessage = (formData) => {
     setIsProcessing(true);
@@ -13,7 +18,7 @@ export default function Contact() {
         process.env.REACT_APP_EMAIL_serviceId,
         process.env.REACT_APP_EMAIL_tamplateId,
         formData,
-        process.env.REACT_APP_EMAIL_publicId,
+        process.env.REACT_APP_EMAIL_publicId
       )
       .then(
         (result) => {
@@ -30,15 +35,22 @@ export default function Contact() {
         }
       );
   };
-
   return (
     <div className="contactBg">
       <div className="container" id="contact">
         <div className="row">
           <div className="col-12 mt-3">
             <div className="card">
-              <div className="contactHadding">
-                <h1>CONTACT</h1>
+              <div className="text-center mt-4">
+                <h3 className="display-5 fw-bold text-dark">Courses</h3>
+                <div
+                  className="mx-auto mb-3"
+                  style={{
+                    width: "80px",
+                    height: "4px",
+                    backgroundColor: "#f39c12",
+                  }}
+                ></div>
               </div>
               <div className="row">
                 <div className="col-12">

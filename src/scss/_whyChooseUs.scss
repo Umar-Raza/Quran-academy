@@ -5,9 +5,11 @@
     color: $primaryColor;
     text-decoration: underline;
 }
-.whyChooseUs{
+
+.whyChooseUs {
     margin-top: 5rem;
 }
+
 .why_choose_us_card {
 
     .card {
@@ -43,15 +45,16 @@
         transition: 0.5s ease-in-out;
 
         &:hover {
-
             .iconDiv {
                 background-color: $primaryColor;
-                transition: 0.5s ease-in-out;
+                 transition: 0.5s ease-in-out;
             }
-
+            
             i {
+                transition: 0.5s ease-in-out;
                 color: #ffff;
             }
+    
         }
     }
 

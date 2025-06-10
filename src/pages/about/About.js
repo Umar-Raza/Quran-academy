@@ -1,6 +1,5 @@
 import { Check } from "lucide-react";
 import AboutImg from "../../assets/aboutImg.jpg";
-import { Link } from "react-router-dom";
 export default function About() {
   return (
     <div className="bg-light py-5 mt-5" id="about">
@@ -23,16 +22,16 @@ export default function About() {
         </div>
 
         {/* Main Content Section */}
-        <div className="row align-items-center g-5">
+        <div className="row">
           {/* Left Image Section */}
-          <div className="col-lg-6">
-            <div className="position-relative">
+          <div className="col-lg-6 d-flex justify-content-center align-items-center ">
+            <div className="position-relative ">
               <img
                 src={AboutImg}
                 alt="Student learning Quran online"
                 width={600}
                 height={400}
-                className="img-fluid rounded-4 shadow-lg"
+                className="img-fluid rounded-4 shadow-lg mb-4"
                 style={{ width: "100%", height: "auto" }}
               />
             </div>
@@ -150,19 +149,6 @@ export default function About() {
                 </p>
                 <p className="fw-medium text-dark mb-0">- Sahih Bukhari</p>
               </div>
-
-              {/* CTA Button */}
-              {/* <button
-                className="btn btn-md px-4 py-3 fw-semibold rounded-3 border-0"
-                style={{
-                  backgroundColor: "#2d5a3d",
-                  color: "white",
-                }}
-              >
-                <Link to="/ourStory">
-                  Learn More About Us
-                </Link>
-              </button> */}
             </div>
           </div>
         </div>

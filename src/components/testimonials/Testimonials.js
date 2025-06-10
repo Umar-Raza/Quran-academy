@@ -5,15 +5,14 @@ export default function Testimonials() {
     dots: true,
     infinite: true,
     speed: 500,
-    autoplay: true,
     slidesToShow: 1,
-    // slidesToScroll: 1,
+    slidesToScroll: 1,
   };
   return (
     <div className="container">
       <div className="row">
         <h2 className="testimonials_hadding mt-5 mb-3">Our Student Voice</h2>
-        <div className="col-12 col-md-6 m-auto mt-3">
+        <div className="col-12 col-md-8 m-auto mt-3">
           <div className="testimonials_content ">
             <Slider {...settings} className="w-100 overflow-hidden">
               <div>

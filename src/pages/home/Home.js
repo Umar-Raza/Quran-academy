@@ -10,11 +10,11 @@ import About from "../about/About";
 
 export default function Home() {
   return (
-    <div id="home">
+    <div id="home" className="p-0">
       <Header />
       <HeroSection />
       <About />
-      <Courses/>
+      <Courses />
       <WhyChooseUs />
       <TestiMonials />
       <Contact />

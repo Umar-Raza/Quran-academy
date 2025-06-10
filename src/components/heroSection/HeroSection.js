@@ -8,7 +8,7 @@ export default function HeroSection() {
     // <section>
     <div className="container">
       <div className="row mt-5">
-        <div className="col-lg-6 col-md-12 mb-4 mb-lg-0 order-2 order-md-1">
+        <div className="col-lg-6 col-md-12 mb-4 mb-lg-0 order-2 order-md-1 ">
           <div className="pe-lg-4">
             {/* Main Heading */}
             <h2
@@ -17,12 +17,6 @@ export default function HeroSection() {
             >
               Learn Quran Online with Expert Teachers
             </h2>
-
-            {/* Subheading */}
-            {/* <h3 className="h4 fw-bold mb-4" style={{ color: "#f39c12" }}>
-              Providing Quality Islamic Education Since 2022
-            </h3> */}
-
             {/* Description */}
             <p
               className="lead text-muted mb-4"
@@ -107,25 +101,16 @@ export default function HeroSection() {
 
         {/* Image */}
         <div className="col-lg-6 col-md-12 order-1 order-md-2 mb-4">
-          <div className="d-flex justify-content-center align-items-center h-100">
+          <div className="d-flex  justify-content-lg-end justify-content-md-end justify-content-center h-100">
             <img
               src={QuranBannner}
               alt="Quran Academy Banner"
               width="430"
-              className="img-fluid  rounded-4 shadow-lg max-wodth-100 height-auto"
-
-              //   <Image
-              //     src="quranBannner"
-              //     alt="Islam Online Academy - Learn Quran with Expert Teachers"
-              //     width={600}
-              //     height={400}
-              //     className="img-fluid rounded-4 shadow-lg"
-              //     style={{ maxWidth: "100%", height: "auto" }}*/}
+              className="img-fluid rounded-4 mb-sm-5  max-width-100 height-auto"
+              
             />
           </div>
         </div>
-        {/* <img src={HeroImg} alt="QuranPak" className="w-100" /> */}
-        {/* </div> */}
       </div>
     </div>
   );
