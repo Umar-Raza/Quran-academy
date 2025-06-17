@@ -1,0 +1,34 @@
+.container {
+
+    .heroHeading {
+        color: $primary;
+        font-family: $headings;
+    }
+
+    .lead {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        font-family: $paragraph;
+    }
+
+}
+
+.btn-md:hover {
+    .freeTrailBtn {
+        color: $primary !important;
+    }
+}
+
+.exploreCoursesBtn {
+    color: $primary;
+    background-color:$background;
+    border: 1px solid $primary !important;
+    font-weight: bolder;
+
+}
+
+.exploreCoursesBtn:hover {
+    color: $primary;
+    background-color: $accent;
+    border: 1px solid $accent !important;
+}

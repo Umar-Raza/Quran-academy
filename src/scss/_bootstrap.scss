@@ -6,11 +6,21 @@
 @import url("slick-carousel/slick/slick-theme.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css");
 @import url("react-toastify/dist/ReactToastify.css");
-@import url("react-toastify/dist/ReactToastify.css");
-@import "bootstrap-icons/font/bootstrap-icons";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
 
-$primaryColor: #2d5a3d;
-$whiteColor: #fff;
+
+$primary: #b6612f;
+$background: #ffffff;
+$foreground: #0b0a09;
+$secondary: #dbd8d7;
+$accent: #d2baac;
+$light: #F0EFEF;
+
+$headings: "poppins", sans-serif;
+$paragraph: "poppins", sans-serif;
+
+
+
 
 * {
   margin: 0;
@@ -26,37 +36,43 @@ footer {
 
 
 .btn {
-  color: $primaryColor;
+  color: $background;
+  background-color: $primary;
   font-weight: 500;
   padding: 7px, 15px;
-  border: 1px solid $primaryColor;
-  // border-radius: 50px;
-  text-decoration: none;
+  text-decoration: none !important;
 
-}
+  Link {
+    text-decoration: none !important;
 
-.freeTrailBtn {
-  text-decoration: none;
-  color: $whiteColor;
-}
+  }
 
-.exploreCourseBtn {
-  text-decoration: none;
-  color: $whiteColor;
+  i {
+    color: $background;
+  }
 }
 
 .btn:hover {
+  color: $primary;
+  background-color: $accent;
+
   i {
-    color: $whiteColor;
+    color: $primary;
   }
-
-  color: $whiteColor;
-  background-color: $primaryColor;
 }
 
-i {
-  color: $primaryColor;
+
+i,
+.featureBadges {
+  color: $primary ;
 }
+
+
+
+
+
+
+
 
 p {
   color: #596b65;
@@ -75,9 +91,16 @@ h5,
 h6 {
   font-size: 2rem;
   line-height: 50px;
+  // color: $primary;
   font-family: "Poppins", sans-serif;
 }
 
 p {
   font-family: "Poppins", sans-serif;
+}
+
+.bottomLine {
+  width: 80px;
+  height: 4px;
+  background-color: $primary;
 }

@@ -1,7 +1,42 @@
 .preLoader {
-    // background-color: $whiteColor;
+    background-color: $light;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    .loader {
+        width: 90px;
+        height: 90px;
+        border: 6px solid $accent;
+        border-radius: 50%;
+        display: inline-block;
+        position: relative;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+    }
+
+    .loader::after {
+        content: '';
+        box-sizing: border-box;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        border: 6px solid;
+        border-color: $primary transparent;
+    }
+
+    @keyframes rotation {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
 }

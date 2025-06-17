@@ -5,7 +5,8 @@ import Routes from "./pages/Routes";
 import { BrowserRouter } from "react-router-dom";
 import PreLoader from "./components/preLoader/PreLoader";
 import { useState, useEffect } from "react";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 function App() {
   const [loading, setLoading] = useState(false);
 
@@ -18,13 +19,13 @@ function App() {
 
   return (
     <>
-      {/* {loading ? 
+      {loading ? (
         <PreLoader />
-       :  */}
-      <BrowserRouter>
-        <Routes />
-      </BrowserRouter>
-      {/* } */}
+      ) : (
+        <BrowserRouter>
+          <Routes />
+        </BrowserRouter>
+      )}
 
       <ToastContainer
         position="top-center"

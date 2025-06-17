@@ -2,19 +2,12 @@ import { Check } from "lucide-react";
 import AboutImg from "../../assets/aboutImg.jpg";
 export default function About() {
   return (
-    <div className="bg-light py-5 mt-5" id="about">
+    <div className="aboutBg py-5 mt-5" id="about">
       <div className="container" id="about">
         {/* Header Section */}
         <div className="text-center mb-5">
           <h1 className="display-4 fw-bold text-dark mb-3">About Us</h1>
-          <div
-            className="mx-auto mb-3"
-            style={{
-              width: "80px",
-              height: "4px",
-              backgroundColor: "#f39c12",
-            }}
-          ></div>
+          <div className="bottomLine mx-auto mb-3"></div>
           <p className="lead text-muted">
             Established in 2023 with a mission to spread Quranic education
             worldwide
@@ -40,11 +33,11 @@ export default function About() {
           {/* Right Content Section */}
           <div className="col-lg-6">
             <div className="ps-lg-4">
-              <h2 className="h2 fw-bold mb-4" style={{ color: "#2d5a3d" }}>
+              <h2 className="aboutRight h2 fw-bold mb-4">
                 Your Trusted Partner in Islamic Education
               </h2>
 
-              <p className="text-muted mb-4" style={{ lineHeight: "1.7" }}>
+              <p className="text-muted mb-4">
                 Our Academy is a premier institution dedicated to providing
                 high-quality Quranic education to students worldwide. Founded in
                 2022 in Pakistan, we have quickly established ourselves as a
@@ -64,14 +57,7 @@ export default function About() {
               <div className="row g-3 mb-4">
                 <div className="col-sm-6">
                   <div className="d-flex align-items-center">
-                    <div
-                      className="rounded-circle d-flex align-items-center justify-content-center me-3"
-                      style={{
-                        width: "24px",
-                        height: "24px",
-                        backgroundColor: "#2d5a3d",
-                      }}
-                    >
+                    <div className="featureIcon rounded-circle d-flex align-items-center justify-content-center me-3">
                       <Check size={14} color="white" />
                     </div>
                     <span className="text-muted fw-medium">
@@ -82,14 +68,7 @@ export default function About() {
 
                 <div className="col-sm-6">
                   <div className="d-flex align-items-center">
-                    <div
-                      className="rounded-circle d-flex align-items-center justify-content-center me-3"
-                      style={{
-                        width: "24px",
-                        height: "24px",
-                        backgroundColor: "#2d5a3d",
-                      }}
-                    >
+                    <div className="featureIcon rounded-circle d-flex align-items-center justify-content-center me-3">
                       <Check size={14} color="white" />
                     </div>
                     <span className="text-muted fw-medium">
@@ -100,14 +79,7 @@ export default function About() {
 
                 <div className="col-sm-6">
                   <div className="d-flex align-items-center">
-                    <div
-                      className="rounded-circle d-flex align-items-center justify-content-center me-3"
-                      style={{
-                        width: "24px",
-                        height: "24px",
-                        backgroundColor: "#2d5a3d",
-                      }}
-                    >
+                    <div className="featureIcon rounded-circle d-flex align-items-center justify-content-center me-3">
                       <Check size={14} color="white" />
                     </div>
                     <span className="text-muted fw-medium">
@@ -118,14 +90,7 @@ export default function About() {
 
                 <div className="col-sm-6">
                   <div className="d-flex align-items-center">
-                    <div
-                      className="rounded-circle d-flex align-items-center justify-content-center me-3"
-                      style={{
-                        width: "24px",
-                        height: "24px",
-                        backgroundColor: "#2d5a3d",
-                      }}
-                    >
+                    <div className="featureIcon rounded-circle d-flex align-items-center justify-content-center me-3">
                       <Check size={14} color="white" />
                     </div>
                     <span className="text-muted fw-medium">
@@ -136,13 +101,7 @@ export default function About() {
               </div>
 
               {/* Quote Section */}
-              <div
-                className="p-3 mb-4 rounded-3"
-                style={{
-                  backgroundColor: "#f8f9fa",
-                  borderLeft: "4px solid #2d5a3d",
-                }}
-              >
+              <div className="leftLineQuote p-3 mb-4 rounded-3">
                 <p className="fst-italic text-muted mb-2">
                   "The best of you are those who learn the Quran and teach it to
                   others."

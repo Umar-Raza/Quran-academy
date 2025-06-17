@@ -10,7 +10,7 @@ export default function Header() {
         <div className="navigation d-flex align-items-center justify-content-between">
           <div className="logo">
             <h2 className="d-flex align-items-center mb-0">
-              <i className="ri-book-open-fill"></i>Noor Al-Islam.
+              <i className="ri-book-open-fill"></i>Miftah Al-Islam.
             </h2>
           </div>
           <div className="nav " id="navbar">

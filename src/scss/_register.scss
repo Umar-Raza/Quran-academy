@@ -1,5 +1,5 @@
 .bg_Color {
-    background-color: rgba(226, 248, 248, 0.664);
+    background-color: $light;
     position: absolute;
     top: 0;
     left: 0;
@@ -18,11 +18,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            color: $primaryColor;
+            color: $primary;
 
             h1 {
                 text-align: center;
-                border-bottom: 2px solid $primaryColor;
 
             }
         }
@@ -36,14 +35,13 @@
                 margin-top: 2rem;
 
                 .form-control:focus {
-                    border-color: $primaryColor;
-                    box-shadow: 0 0 0 0.1rem #8ebdb1;
+                    border-color: $primary;
+                    box-shadow: 0 0 0 0.1rem $accent;
                 }
 
                 .form-select:focus {
-                    border-color: $primaryColor ;
-                    box-shadow: 0 0 0 0.1rem #8ebdb1;
-
+                    border-color: $primary;
+                    box-shadow: 0 0 0 0.1rem $accent;
                 }
 
                 .error-msg {
@@ -70,7 +68,7 @@
             }
 
             .back_to_home_link {
-                color: $primaryColor;
+                color: $primary;
             }
         }
     }
@@ -82,10 +80,11 @@
         width: 70%;
     }
 }
+
 // @media only screen and (max-width: 1200) {
 
 //     .card {
 //         width: 70%;
 //     }
-    
+
 // }

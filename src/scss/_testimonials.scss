@@ -1,55 +1,114 @@
-.testimonials_hadding {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    color: $primaryColor;
-    text-decoration: underline
+.testimonialsDiv {
+
+    .testimonialCol {
+        width: 100%;
+    }
+
+    .rating {
+        color: #F4A024; // Gold color, commonly used for rating stars
+        font-size: 2rem;
+        line-height: 1;
+
+    }
+
+    .testimonial_content {
+        word-spacing: 0.2em;
+        line-height: 1.5em;
+
+
+        .text::before {
+            content: "“"; // left double quotation mark
+            font-family: sans-serif;
+            color: $primary;
+            font-size: 2rem;
+            margin-right: 0.2em;
+            vertical-align: top;
+        }
+
+        .text::after {
+            content: "”"; // right double quotation mark
+            font-family: sans-serif;
+            color: $primary;
+            font-size: 2rem;
+            margin-left: 0.2em;
+            vertical-align: bottom;
+        }
+
+
+        h4 {
+            font-weight: 400;
+            font-size: 1.4rem;
+            margin-bottom: 0;
+        }
+
+    }
+
+
 }
 
-.single_testimonial {
-    text-align: center;
-    justify-content: center;
-    word-spacing: 0.3em;
-    line-height: 1.5em;
+.rounded-circle {
+    width: 80px;
+    height: 80px;
+    color: $background;
+    font-size: 30px;
+    font-weight: bold;
+    border: 2px solid $secondary;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
 
-    i {
-        font-size: 1rem;
-    }
+.slick-prev:before,
+.slick-next:before {
+    font-family: 'slick';
+    font-size: 20px !important;
+    line-height: 1 !important;
+    opacity: .75 !important;
+    color: $primary !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
 
-    p {
 
-        .quotes::before {
-            content: open-quote;
-            font-family: sans-serif;
-            height: 0;
-            line-height: 0;
-            font-size: 1.5rem;
-            color: $primaryColor;
 
-        }
+.slick-dots {
+    bottom: -40px;
+}
 
-        .quotes::after {
-            content: close-quote;
-            font-family: sans-serif;
-            height: 0;
-            line-height: 0;
-            color: $primaryColor;
-            font-size: 1.5rem;
-        }
+.slick-dots li button:before {
+    color: $primary !important;
+    font-size: 12px !important;
+}
 
-    }
+.slick-dots li.slick-active button:before {
+    color: $primary;
+}
 
-    h4 {
-        font-weight: 400;
-        font-size: 1.4rem;
-        margin-bottom: 0;
-    }
+.slick-prev,
+.slick-next {
+    z-index: 1 !important;
+}
 
-    h6 {
-        font-weight: 200;
-        font-size: 1rem;
-        line-height: 0;
-        margin-top: 0;
+.slick-prev {
+    left: -25px;
+}
+
+.slick-next {
+    right: -25px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: $primary;
+    font-size: 25px !important;
+}
+
+.testimonial-carousel {
+    padding: 0 30px 50px 30px;
+}
+
+@media (max-width: 768px) {
+    .testimonial-carousel {
+        padding: 0 15px 50px 15px;
     }
 }

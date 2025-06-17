@@ -7,7 +7,6 @@ import TestiMonials from "../../components/testimonials/Testimonials";
 import Footer from "../../components/footer/Footer";
 import Contact from "../contact/Contact";
 import About from "../about/About";
-
 export default function Home() {
   return (
     <div id="home" className="p-0">

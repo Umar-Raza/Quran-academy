@@ -50,19 +50,19 @@ export default function Footer() {
               <p>Follow us on social media</p>
               <span>
                 {""}
-                <a href="faceboook.com"><i class="ri-facebook-circle-line"></i></a>
+                <a href="faceboook.com"><i className="ri-facebook-circle-line"></i></a>
               </span>
               <span>
                 {""}
-                <a href="instagram.com"><i class="ri-instagram-line"></i></a>
+                <a href="instagram.com"><i className="ri-instagram-line"></i></a>
               </span>
               <span>
                 {""}
-                <a href="faceboook.com"><i class="ri-mail-line"></i></a>
+                <a href="faceboook.com"><i className="ri-mail-line"></i></a>
               </span>
               <span>
                 {""}
-                <a href="https://api.whatsapp.com/send?phone=+923107029087"><i class="ri-whatsapp-line"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=+923107029087"><i className="ri-whatsapp-line"></i></a>
               </span>
             </div>
           </Col>

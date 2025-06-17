@@ -1,6 +1,6 @@
 import Nazara from "../../assets/nazra-quran.jpg";
 import Tarjama from "../../assets/tarjama-quran.jpg";
-import Tafsser from "../../assets/tafseerCourse.jpeg";
+import Tafsser from "../../assets/tafseerCourse.jpg";
 import NamzaCourse from "../../assets/namz-course.jpg";
 import FazUloom from "../../assets/farzUloom.jpg";
 import DuaBook from "../../assets/duaCourse.jpg";
@@ -33,7 +33,7 @@ const CoursesData = [
     img: Tafsser,
     hadding: "Tafseer Course",
     paragaraph:
-      "In this course the students will read explanation of Quran.And they will receive extra attention from  qualified teachers.",
+      "In this course, students will read, translate, and explain the Holy Quran. They will also receive extra attention from highly experienced and qualified teachers.",
     enroll: (
       <Link className="btn w-50" to="/registration">
         Apply Now

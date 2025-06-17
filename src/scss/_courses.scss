@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: $primaryColor;
+    color: $primary;
     margin-top: 3rem;
 
     h1 {
@@ -10,19 +10,16 @@
     }
 }
 
-.coursCard {
-
+.courseCard {
     .card {
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         transition: 0.5s ease-in-out;
         width: auto;
 
-
-
         h5 {
             margin-left: 4px;
             font-size: 30px;
-            color: $primaryColor;
+            color: $primary;
         }
 
         p {
@@ -40,17 +37,7 @@
             object-fit: cover;
         }
 
-        // .enroll_now {
-        //     text-decoration: none;
-        //     color: $primaryColor;
-        //     font-weight: 800;
-        //     font-size: 1rem;
 
-        // }
-
-        // .enroll_now:hover {
-        //     // text-decoration: underline;
-        // }
 
         .zoom {
             overflow: hidden;
@@ -66,3 +53,19 @@
     }
 
 }
+
+@media (max-width: 767.98px) {
+    .card-img-wrapper {
+        height: 150px; // Shorter height for mobile
+    }
+
+    .coursCard .card {
+        width: 100%;
+    }
+}
+
+// @media (max-width: 576px) {
+//     .courseImg {
+//         height: 50% !important;
+//     }
+// }

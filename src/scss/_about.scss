@@ -1,0 +1,27 @@
+.aboutBg {
+    background-color: $light;
+
+    .aboutRight {
+        color: $primary !important;
+
+    }
+
+    .lead {
+        font-family: $paragraph;
+    }
+
+    .text-muted {
+        font-family: $paragraph;
+    }
+
+    .featureIcon {
+        background: $primary;
+        width: 24px;
+        height: 24px;
+    }
+
+    .leftLineQuote {
+        background-color: #f8f9fa;
+        border-left: 4px solid $primary;
+    }
+}

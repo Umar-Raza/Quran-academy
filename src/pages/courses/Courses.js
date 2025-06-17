@@ -1,6 +1,5 @@
 import React from "react";
 import CoursesData from "../../constant/courseData/CoursesData";
-// import CoursCard from "../../components/courseCard/CoursCard";
 
 export default function Courses() {
   return (
@@ -9,14 +8,7 @@ export default function Courses() {
         <div className="col mt-5">
           <div className="text-center">
             <h1 className="display-4 fw-bold text-dark">Courses</h1>
-            <div
-              className="mx-auto mb-3"
-              style={{
-                width: "80px",
-                height: "4px",
-                backgroundColor: "#f39c12",
-              }}
-            ></div>
+            <div className="bottomLine mx-auto mb-3"></div>
             <p className="lead text-muted">
               Holistic Islamic learning journeys for every generation.
             </p>
@@ -28,30 +20,30 @@ export default function Courses() {
       <div className="row g-4">
         {/* <div className="col"> */}
         {CoursesData.map((items, index) => (
-          <div className="col-md-6 mb-3 coursCard" key={index}>
+          <div className="col-md-6 mb-3 courseCard" key={index}>
             <div className="card h-100 shadow-sm">
-              <div className="row g-0">
+              <div className="row g-0 h-100">
                 <div className="col-md-5">
-                  <img
-                    className="img-fluid rounded-start h-100 object-fit-cover"
-                    src={items.img}
-                    alt="course images"
-                  />
+                  <div className="zoom h-100">
+                    <img
+                      className="img-fluid rounded-start h-100 w-100"
+                      src={items.img}
+                      alt="course images"
+                      style={{ objectFit: "cover" }}
+                    />
+                  </div>
                 </div>
                 <div className="col-md-7">
-                  <div className="card-body d-flex flex-column  h-100">
+                  <div className="d-flex flex-column h-100 p-2 p-sm-3">
                     <div>
                       <h5 className="card-title text-center">
                         {items.hadding}
                       </h5>
-                      {/* <h6 className="card-subtitle mb-2 text-muted">
-                        <i className="bi bi-calendar-event me-2"></i>
-                        {post.date}
-                      </h6> */}
-                      <p className="card-text">{items.paragaraph}</p>
+
+                      <p className="card-text small">{items.paragaraph}</p>
                     </div>
                     <div>
-                      <span className=" d-flex justify-content-center mt-2">
+                      <span className="d-flex justify-content-center mt-2">
                         {items.enroll}
                       </span>
                     </div>
@@ -62,21 +54,6 @@ export default function Courses() {
           </div>
         ))}
       </div>
-      {/* <div className="row">
-            {CoursesData.map((items, index) => {
-              return (
-                <CoursCard
-                key={index}
-                img={items.img}
-                hadding={items.hadding}
-                paragaraph={items.paragaraph}
-                  enroll={items.enroll}
-                  />
-                  );
-                  })}
-                  </div> */}
-      {/* </div> */}
-      {/* // </div> */}
     </div>
   );
 }
