@@ -24,7 +24,7 @@ export default function Testimonials() {
 
   const testimonials = [
     {
-      name: "Ayub Khan",
+      name: "Ayub Ashraf",
       role: "Qaida and Nazra Student",
       city: "Peshawar, Pakistan",
       text: "Alhamdulillah, I’ve been learning the Quran for one year, and the experience has been amazing. My teacher explains every rule and pronunciation with clarity and care. I feel more confident in my recitation now and look forward to every lesson. Highly recommended for anyone wishing to learn the Quran properly.",

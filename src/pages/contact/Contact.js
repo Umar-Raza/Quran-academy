@@ -20,7 +20,7 @@ export default function Contact() {
         process.env.REACT_APP_EMAIL_serviceId,
         process.env.REACT_APP_EMAIL_tamplateId,
         formData,
-        process.env.REACT_APP_EMAIL_publicId
+        process.env.REACT_APP_EMAIL_publicKey
       )
       .then(
         (result) => {
