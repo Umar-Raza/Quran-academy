@@ -154,7 +154,7 @@ export default function Contact() {
                     <div className="form-floating ">
                       <input
                         type="text"
-                        className="form-control  "
+                        className="form-control"
                         placeholder="Subject"
                         name="subject"
                         {...register("message", {

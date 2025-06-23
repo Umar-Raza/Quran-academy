@@ -10,6 +10,7 @@ const initialState = {
   gender: "",
   course: "",
   email: "",
+  whatsAppNo: "",
   address: "",
 };
 
@@ -23,13 +24,14 @@ export default function Register() {
   const handleRegister = async (e) => {
     e.preventDefault();
 
-    let { fullName, fatherName, birthday, gender, course, address, email } =
+    let { fullName, fatherName, birthday, gender, course, address, email, whatsAppNo } =
       state;
 
     fullName = fullName.trim();
     fatherName = fatherName.trim();
     birthday = birthday.trim();
     address = address.trim();
+    whatsAppNo = whatsAppNo.trim();
 
     let formData = {
       fullName,
@@ -37,6 +39,7 @@ export default function Register() {
       birthday,
       gender,
       course,
+      whatsAppNo,
       address,
       email,
       // id: window.getRandomId(),
@@ -173,7 +176,22 @@ export default function Register() {
                             <label>Email address*</label>
                           </div>
                         </div>
-                        <div className="col-12">
+                        <div className="col-12 col-md-6">
+                          <div className="form-floating ">
+                            <input
+                              type="tel"
+                              className="form-control"
+                              onChange={handleChange}
+                              placeholder="Whatsapp number with country code*"
+                              inputmode="numeric"
+                              required
+                              value={state.whatsAppNo}
+                              name="whatsAppNo"
+                            />
+                            <label>Whatsapp*</label>
+                          </div>
+                        </div>
+                        <div className="col-12 col-md-6">
                           <div className="form-floating ">
                             <input
                               type="text"

@@ -2,17 +2,17 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./home/Home";
 import Register from "../components/register/Register";
-import OurStory from "./about/OurStory";
+import { Dashboard } from "./dashboard/Dashboard";
 export default function Index() {
   return (
     <>
-      {/* <Header /> */}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="registration" element={<Register />} />
-        <Route path="ourStory" element={<OurStory />} />
+        <Route path="dashboard" element={<Dashboard />} />
       </Routes>
-      {/* <Footer /> */}
+
     </>
   );
 }

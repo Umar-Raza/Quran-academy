@@ -36,12 +36,12 @@
 
                 .form-control:focus {
                     border-color: $primary;
-                    box-shadow: 0 0 0 0.1rem $accent;
+                    box-shadow: 0 0 0 0.1rem $primary;
                 }
 
                 .form-select:focus {
                     border-color: $primary;
-                    box-shadow: 0 0 0 0.1rem $accent;
+                    box-shadow: 0 0 0 0.1rem $primary;
                 }
 
                 .error-msg {
