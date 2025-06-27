@@ -26,13 +26,13 @@
             }
         }
 
-        .conatacDiv {
+        .card-body {
             margin: 0 auto;
-            width: 80%;
+            // width: 80%;
 
 
             .form-floating {
-                margin-top: 2rem;
+                margin-top: 1rem;
 
                 .form-control:focus {
                     border-color: $primary;

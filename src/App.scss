@@ -3,7 +3,7 @@
 @import'../src/scss/heroSection';
 @import'../src/scss/about';
 @import'../src/scss/courses';
-@import'../src/scss/whyChooseUs';   
+@import'../src/scss/whyChooseUs';
 @import'../src/scss/testimonials';
 @import'../src/scss/contact';
 @import'../src/scss/newsLetter';
@@ -12,3 +12,255 @@
 @import'../src/scss/preLoader';
 @import'../src/scss/dashboard';
 
+/* Enhanced Custom styles */
+
+// .bgDashboard {
+//   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+//   min-height: 100vh;
+// }
+
+// .bg_Color {
+//   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+//   min-height: 100vh;
+//   padding: 20px 0;
+// }
+
+// /* Enhanced animations */
+// @keyframes pulse {
+//   0% {
+//     background-color: rgba(25, 135, 84, 0.1);
+//     transform: scale(1);
+//   }
+//   50% {
+//     background-color: rgba(25, 135, 84, 0.25);
+//     transform: scale(1.02);
+//   }
+//   100% {
+//     background-color: rgba(25, 135, 84, 0.1);
+//     transform: scale(1);
+//   }
+// }
+
+// .animate__animated.animate__pulse {
+//   animation-name: pulse;
+//   animation-duration: 2s;
+//   animation-iteration-count: 3;
+// }
+
+// /* Enhanced card hover effects */
+// .card {
+//   transition: all 0.3s ease-in-out;
+//   border-radius: 12px;
+//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+// }
+
+// .card:hover {
+//   transform: translateY(-3px);
+//   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+// }
+
+// /* Enhanced table styling */
+// .table-hover tbody tr:hover {
+//   background-color: rgba(0, 123, 255, 0.08);
+//   transform: scale(1.01);
+//   transition: all 0.2s ease-in-out;
+// }
+
+// /* New student row styling */
+// .table-success {
+//   background-color: rgba(25, 135, 84, 0.12) !important;
+//   border-left: 5px solid #198754 !important;
+// }
+
+// .table-warning {
+//   background-color: rgba(255, 193, 7, 0.1) !important;
+// }
+
+// /* Enhanced blinking animation */
+// @keyframes blink {
+//   0%,
+//   50% {
+//     opacity: 1;
+//     transform: scale(1);
+//   }
+//   25% {
+//     opacity: 0.7;
+//     transform: scale(1.1);
+//   }
+//   75% {
+//     opacity: 0.9;
+//     transform: scale(0.95);
+//   }
+//   100% {
+//     opacity: 1;
+//     transform: scale(1);
+//   }
+// }
+
+// .blink {
+//   animation: blink 2s infinite;
+// }
+
+// /* Enhanced badge animations */
+// @keyframes pulse-badge {
+//   0% {
+//     transform: scale(1);
+//     opacity: 1;
+//   }
+//   50% {
+//     transform: scale(1.15);
+//     opacity: 0.8;
+//   }
+//   100% {
+//     transform: scale(1);
+//     opacity: 1;
+//   }
+// }
+
+// .badge.bg-success {
+//   animation: pulse-badge 2s infinite;
+// }
+
+// /* Enhanced form controls */
+// .form-control:focus,
+// .form-select:focus {
+//   border-color: #667eea;
+//   box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+// }
+
+// /* Enhanced buttons */
+// .btn {
+//   transition: all 0.3s ease-in-out;
+//   border-radius: 8px;
+// }
+
+// .btn:hover {
+//   transform: translateY(-2px);
+//   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+// }
+
+// .btn:active {
+//   transform: translateY(0);
+// }
+
+// /* Enhanced scrollbar */
+// .table-responsive::-webkit-scrollbar {
+//   height: 10px;
+// }
+
+// .table-responsive::-webkit-scrollbar-track {
+//   background: #f8f9fa;
+//   border-radius: 10px;
+// }
+
+// .table-responsive::-webkit-scrollbar-thumb {
+//   background: linear-gradient(45deg, #667eea, #764ba2);
+//   border-radius: 10px;
+// }
+
+// .table-responsive::-webkit-scrollbar-thumb:hover {
+//   background: linear-gradient(45deg, #5a67d8, #6b46c1);
+// }
+
+// /* Loading animation */
+// @keyframes spin {
+//   0% {
+//     transform: rotate(0deg);
+//   }
+//   100% {
+//     transform: rotate(360deg);
+//   }
+// }
+
+// .spinner-border {
+//   animation: spin 1s linear infinite;
+// }
+
+// /* Enhanced alert styling */
+// .alert {
+//   border-radius: 12px;
+//   border: none;
+//   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+// }
+
+// /* Responsive enhancements */
+// @media (max-width: 768px) {
+//   .card-body {
+//     padding: 1rem;
+//   }
+
+//   .table-responsive {
+//     font-size: 0.875rem;
+//   }
+
+//   .btn-sm {
+//     padding: 0.25rem 0.5rem;
+//     font-size: 0.75rem;
+//   }
+// }
+
+// /* Enhanced text truncation */
+// .text-truncate {
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+//   white-space: nowrap;
+//   max-width: 200px;
+// }
+
+// /* Status indicators */
+// .badge {
+//   font-size: 0.75em;
+//   font-weight: 600;
+//   border-radius: 6px;
+// }
+
+// /* Connection status colors */
+// .text-success {
+//   color: #198754 !important;
+// }
+
+// .text-warning {
+//   color: #ffc107 !important;
+// }
+
+// .text-danger {
+//   color: #dc3545 !important;
+// }
+
+// /* Enhanced table headers */
+// .table thead th {
+//   background-color: #f8f9fa;
+//   border-bottom: 2px solid #dee2e6;
+//   font-weight: 600;
+//   text-transform: uppercase;
+//   font-size: 0.875rem;
+//   letter-spacing: 0.5px;
+// }
+
+// /* Card footer styling */
+// .card-footer {
+//   background-color: rgba(248, 249, 250, 0.8);
+//   border-top: 1px solid rgba(0, 0, 0, 0.125);
+// }
+
+// /* Link styling */
+// a {
+//   transition: color 0.2s ease-in-out;
+// }
+
+// a:hover {
+//   text-decoration: underline !important;
+// }
+
+// /* Enhanced input group */
+// .input-group-text {
+//   background-color: #f8f9fa;
+//   border-color: #ced4da;
+// }
+
+// /* Notification sound button */
+// .btn-outline-secondary:hover {
+//   background-color: #6c757d;
+//   border-color: #6c757d;
+//   color: white;
+// }
