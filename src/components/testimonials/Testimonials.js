@@ -60,16 +60,13 @@ export default function Testimonials() {
   // Function to generate avatar background color based on name
   const getAvatarColor = (name) => {
     const colors = [
-      "#2E8B57", // Sea Green (Islamic theme)
-      "#4682B4", // Steel Blue
-      "#8B4513", // Saddle Brown
-      "#2F4F4F", // Dark Slate Gray
-      "#556B2F", // Dark Olive Green
-      "#8B008B", // Dark Magenta
-      "#B8860B", // Dark Goldenrod
-      "#4B0082", // Indigo
-      "#800000", // Maroon
-      "#008B8B", // Dark Cyan
+      '#8B4513', //(Saddle Brown)
+      '#2F4F4F',//(Dark Slate Gray)
+      '#556B2F',//(Dark Olive Green)
+      '#8B008B ',//(Dark Magenta)
+      '#4B0082', //(Indigo)
+      '#800000 ',//(Maroon)
+      '#008B8B '//(Dark Cyan)
     ];
     const index = name.charCodeAt(0) % colors.length;
     return colors[index];
@@ -102,9 +99,9 @@ export default function Testimonials() {
       <div
         className="rounded-circle d-flex align-items-center justify-content-center"
         style={{
-        
+
           backgroundColor: getAvatarColor(testimonial.name),
-         
+
         }}
       >
         {getInitials(testimonial.name)}
