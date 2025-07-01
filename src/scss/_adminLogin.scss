@@ -1,0 +1,32 @@
+.bgLogin {
+    background-color: $secondary;
+    height: 100vh;
+
+    .login-form {
+        width: 400px;
+        padding: 2rem 1rem 1rem;
+
+
+        .card-title {
+            color: $primary;
+        }
+
+
+        .form-control:focus {
+            border-color: $primary;
+            box-shadow: 0 0 0 0.1rem $primary;
+        }
+
+        .backToHomeDiv {
+     
+            .backToHomeLink:hover {
+                color: $primary;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    form {
+        padding: 1rem;
+    }
+}

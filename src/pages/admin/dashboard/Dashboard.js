@@ -1,5 +1,3 @@
-"use client";
-
 import {
   collection,
   deleteDoc,
@@ -9,9 +7,11 @@ import {
   query,
 } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import { firestore } from "../../config/firebase";
+import { firestore } from "../../../config/firebase";
+import { useNavigate } from "react-router-dom";
 
 export const Dashboard = () => {
+  const navigate = useNavigate();
   const [students, setStudents] = useState([]);
   const [filteredStudents, setFilteredStudents] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -245,12 +245,18 @@ export const Dashboard = () => {
 
   const courses = [...new Set(students.map((s) => s.course).filter(Boolean))];
 
+  // logout function
+  const logout = () => {
+    localStorage.clear("admin");
+    navigate("/adminLogin");
+  };
+
   return (
-    <div className="bgDashboard" style={{ Width: "100%" }}>
-      <div className="container-fluid px-0"style={{ Width: "100%" }}>
+    <div className="bgDashboard">
+      <div className="container-fluid m-0 p-0">
         <div className="row">
           <div className="col">
-            <nav className="navbar bg-dark mb-2 px-0 ">
+            <nav className="navbar mb-2 px-0 navbar-expand-lg ">
               <div className="container d-flex justify-content-center justify-content-md-between flex-wrap">
                 <h2 className="text-center mb-2 mb-md-0">Student Dashboard</h2>
                 <ul className="navbar-nav flex-row">
@@ -262,12 +268,21 @@ export const Dashboard = () => {
                       </span>
                     </button>
                   </li>
-                  <li className="nav-item mb-2 mb-md-0">
+                  <li className="nav-item mb-2 mb-md-0 me-3">
                     <button type="button" className="btn position-relative">
                       Today Registered
                       <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
                         {studentsToday.length}
                       </span>
+                    </button>
+                  </li>
+                  <li className="nav-item mb-2 mb-md-0">
+                    <button
+                      type="button"
+                      className="btn position-relative"
+                      onClick={logout}
+                    >
+                      Logout
                     </button>
                   </li>
                 </ul>

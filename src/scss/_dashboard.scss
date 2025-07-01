@@ -1,7 +1,7 @@
 .bgDashboard {
     // width: 100%;
-    min-height:  100vh !important;
-    background: $secondary;
+    min-height: 100vh !important;
+    background-color: $secondary;
 
     .spinner {
         color: $primary;
@@ -10,7 +10,7 @@
     .container-fluid {
         nav {
             width: 100%;
-            
+
             .navbar-nav {
                 .nav-item {
                     .badgeButton {

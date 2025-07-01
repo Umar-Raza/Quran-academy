@@ -10,22 +10,22 @@ import "slick-carousel/slick/slick-theme.css";
 function App() {
   const [loading, setLoading] = useState(false);
 
-  // useEffect(() => {
-  //   setLoading(true);
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 4000);
-  // }, []);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 4000);
+  }, []);
 
   return (
     <>
-      {/* {loading ? (
+      {loading ? (
         <PreLoader />
-      ) : ( */}
-      <BrowserRouter>
-        <Routes />
-      </BrowserRouter>
-      {/* )} */}
+      ) : (
+        <BrowserRouter>
+          <Routes />
+        </BrowserRouter>
+      )}
 
       <ToastContainer
         position="top-center"

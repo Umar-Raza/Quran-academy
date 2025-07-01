@@ -1,6 +1,6 @@
 header {
     width: 100%;
-    line-height: 80px;
+    line-height: 60px;
     background-color: #fff;
 
     .nav_list {
@@ -8,12 +8,12 @@ header {
         padding: 0;
         list-style: none;
         display: flex;
-      
+
 
         a {
             font-weight: 600;
-            font-size: 1.2rem;
-            color: #0a2b1e;
+            font-size: 24px;
+            color: $foreground;
             text-decoration: none;
             transition: 0.3s;
 
@@ -42,11 +42,19 @@ header {
         position: fixed;
         top: 0;
         left: 0;
-        background: #0a2b1eb2;
+        background: #2b1c0ab2;
         width: 100%;
         height: 100% !important;
         z-index: 99;
         display: none;
+    }
+
+    .header {
+        .logo {
+            h2 {
+                font-size: 25px;
+            }
+        }
     }
 
     .nav_list {

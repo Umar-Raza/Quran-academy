@@ -23,13 +23,13 @@ export default function HeroSection() {
 
             {/* Action Buttons */}
             <div className="d-flex flex-wrap gap-3 mb-5">
-              <button className="btn btn-md px-3 py-3 fw-semibold rounded-3 border-0">
+              <button className="btn px-3 py-3 fw-semibold rounded-3 border-0">
                 <Link className="freeTrailBtn" to="/registration">
                   Start Free Trial
                 </Link>
               </button>
-              <button className="exploreCoursesBtn btn-md px-3 py-3 fw-bold rounded-3 border-0">
-                <a className="nav-link" href="#courses">
+              <button className="exploreCoursesBtn px-3 py-3 fw-bold rounded-3 border-0">
+                <a className="nav-link" href="#courses" aria-label="courses page">
                   Explore Courses
                 </a>
               </button>
