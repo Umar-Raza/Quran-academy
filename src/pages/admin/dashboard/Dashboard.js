@@ -254,13 +254,15 @@ export const Dashboard = () => {
   return (
     <div className="bgDashboard">
       <div className="container-fluid">
-        <div className="row">
-          <div className="col-12 px-0 mb-3 ">
-            <nav className="navbar navbar-expand-lg bg-body-tertiary d-flex justify-content-center align-items-center">
-              <div class="container">
-                <h2 className="text-center mb-sm-2">Student Dashboard</h2>
-                <ul className="navbar-nav flex-row">
-                  <li className="nav-item me-3 mb-2 mb-md-0 ">
+        <div className="row px-0">
+          <div className="col px-0 ">
+            <nav className="navbar bg-whit px-2 bg-body-tertiary ">
+              <div className="container d-flex justify-content-between align-items-center px-0">
+                <div>
+                  <h2 className="mb-0">Student Dashboard</h2>
+                </div>
+                <ul className="navbar-nav flex-row align-items-center mb-0">
+                  <li className="nav-item me-3 mb-2 mb-md-0">
                     <button className="btn btn-responsive-size position-relative">
                       All Students
                       <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
@@ -269,7 +271,10 @@ export const Dashboard = () => {
                     </button>
                   </li>
                   <li className="nav-item mb-2 mb-md-0 me-3">
-                    <button type="button" className="btn btn-responsive-size position-relative">
+                    <button
+                      type="button"
+                      className="btn btn-responsive-size position-relative"
+                    >
                       Today Registered
                       <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
                         {studentsToday.length}
@@ -289,81 +294,81 @@ export const Dashboard = () => {
               </div>
             </nav>
           </div>
-          {/* Search and Filter Controls */}
-          <div className=" ">
-            {/* <div className="row mb-3 w-100"> */}
-            <div className="col-12 mb-3 d-flex justify-content-center align-items-center">
-              <div className="card">
-                <div className="card-body">
-                  <div className="row g-3 justify-content-center">
-                    <div className="col-12 col-md-4">
-                      <div className="input-group">
-                        <span className="input-group-text">
-                          <i className="bi bi-search"></i>
-                        </span>
-                        <input
-                          type="text"
-                          className="form-control"
-                          placeholder="Search students..."
-                          value={searchTerm}
-                          onChange={(e) => setSearchTerm(e.target.value)}
-                        />
-                        {searchTerm && (
-                          <button
-                            className="btn btn-outline-secondary"
-                            type="button"
-                            onClick={() => setSearchTerm("")}
-                          >
-                            <i className="bi bi-x"></i>
-                          </button>
-                        )}
-                      </div>
-                    </div>
-                    <div className="col-12 col-md-3">
-                      <select
-                        className="form-select"
-                        value={selectedCourse}
-                        onChange={(e) => setSelectedCourse(e.target.value)}
-                      >
-                        <option value="">All Courses</option>
-                        {courses.map((course) => (
-                          <option key={course} value={course}>
-                            {course}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                    <div className="col-12 col-md-3">
-                      <select
-                        className="form-select"
-                        value={sortBy}
-                        onChange={(e) => setSortBy(e.target.value)}
-                      >
-                        <option value="newest">Newest First</option>
-                        <option value="oldest">Oldest First</option>
-                        <option value="name">Name A-Z</option>
-                      </select>
+        </div>
+      </div>
+
+        <div className="container">
+        <div className="row px-0">
+          <div className="col mt-3 mb-3">
+            <div className="card shadow-sm">
+              <div className="card-body">
+                <div className="row  align-items-center">
+                  <div className="col-12 col-sm-6 col-md-4">
+                    <div className="input-group">
+                      <span className="input-group-text bg-white">
+                        <i className="bi bi-search"></i>
+                      </span>
+                      <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Search students..."
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                      />
+                      {searchTerm && (
+                        <button
+                          className="btn btn-outline-secondary"
+                          type="button"
+                          onClick={() => setSearchTerm("")}
+                          tabIndex={-1}
+                        >
+                          <i className="bi bi-x"></i>
+                        </button>
+                      )}
                     </div>
                   </div>
-                  {(searchTerm || selectedCourse) && (
-                    <div className="mt-2 text-center">
-                      {" "}
-                      <small className="text-muted">
-                        Showing {filteredStudents.length} of {students.length}{" "}
-                        students
-                        {searchTerm && ` matching "${searchTerm}"`}
-                        {selectedCourse && ` in "${selectedCourse}"`}
-                      </small>
-                    </div>
-                  )}
+                  <div className="col-12 mt-2 mb-2 col-sm-6 col-md-4">
+                    <select
+                      className="form-select"
+                      value={selectedCourse}
+                      onChange={(e) => setSelectedCourse(e.target.value)}
+                    >
+                      <option value="">All Courses</option>
+                      {courses.map((course) => (
+                        <option key={course} value={course}>
+                          {course}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  <div className="col-12 col-md-4">
+                    <select
+                      className="form-select"
+                      value={sortBy}
+                      onChange={(e) => setSortBy(e.target.value)}
+                    >
+                      <option value="newest">Newest First</option>
+                      <option value="oldest">Oldest First</option>
+                      <option value="name">Name A-Z</option>
+                    </select>
+                  </div>
                 </div>
+                {(searchTerm || selectedCourse) && (
+                  <div className="mt-2 text-center">
+                    <small className="text-muted">
+                      Showing {filteredStudents.length} of {students.length}{" "}
+                      students
+                      {searchTerm && ` matching "${searchTerm}"`}
+                      {selectedCourse && ` in "${selectedCourse}"`}
+                    </small>
+                  </div>
+                )}
               </div>
             </div>
-            {/* </div> */}
           </div>
-          {/* Students Table */}
-          {/* <div className="row"> */}
-          <div className="col-12 d-flex justify-content-center align-items-center">
+        </div>
+        <div className="row">
+          <div className="col mb-3">
             <div className="card">
               <div className="card-header text-white">
                 <div className="d-flex align-items-center justify-content-between">
@@ -564,7 +569,6 @@ export const Dashboard = () => {
           </div>
         </div>
       </div>
-      {/* </div> */}
     </div>
   );
 };

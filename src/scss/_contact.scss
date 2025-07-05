@@ -16,7 +16,7 @@
 
             .form-control:focus {
                 border-color: $primary;
-                box-shadow: 0 0 0 0.1rem $primary;
+                box-shadow: 0 0 0 0.1rem $accent;
             }
 
             .error-msg {
@@ -33,7 +33,7 @@
             margin: 2rem 0 2rem;
         }
 
-        .send_btn:hover {
+        .btn:hover {
             i {
                 color: $primary;
             }

@@ -3,7 +3,7 @@ export default function WhyChooseUsCard(props) {
     return (
                 <div className="col-lg-4 col-md-6 col-sm-12 mx-auto">
                     <div className="why_choose_us_card">
-                        <div className="card" >
+                        <div className="card " >
                             <div className='iconDiv mt-2'>
                                 <i className={props.icon}></i>
                             </div>

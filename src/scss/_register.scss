@@ -1,18 +1,19 @@
 .bg_Color {
-     background-color: $secondary;
+    background-color: $secondary;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .card {
-        margin-top: 7rem !important;
-        margin-bottom: 5rem !important;
-        // width: 80%;
-        height: auto;
         margin: 0 auto;
+        margin-top: 9rem;
+        margin-bottom: 1rem;
 
         .contactHadding {
             display: flex;
@@ -36,12 +37,12 @@
 
                 .form-control:focus {
                     border-color: $primary;
-                    box-shadow: 0 0 0 0.1rem $primary;
+                    box-shadow: 0 0 0 0.1rem $accent;
                 }
 
                 .form-select:focus {
                     border-color: $primary;
-                    box-shadow: 0 0 0 0.1rem $primary;
+                    box-shadow: 0 0 0 0.1rem $accent;
                 }
 
                 .error-msg {
@@ -59,15 +60,24 @@
             }
         }
 
-        .back_to_home {
-            padding: 2rem;
-            margin-bottom: 0;
+        .backToHome {
+            .backToHomeLink {
+                text-decoration: none;
+                color: $background;
+            }
+        }
 
-            i {
-                font-size: 1.2rem;
+        .btn:hover {
+            .backToHomeLink {
+
+                color: $primary;
             }
 
-            .back_to_home_link {
+            .btn {
+                border: 1px solid;
+            }
+
+            .bi {
                 color: $primary;
             }
         }
@@ -75,8 +85,13 @@
 }
 
 @media only screen and (min-width: 500px) {
+    .bg_Color {
+        .card {
+            padding: 1.5rem;
+            width: 80%;
+            margin-top: 0% !important;
+            margin-bottom: 0% !important;
+        }
 
-    .card {
-        width: 70%;
     }
 }
