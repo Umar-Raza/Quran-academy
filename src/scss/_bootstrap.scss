@@ -53,12 +53,9 @@ footer {
 }
 
 .btn:hover {
-  color: $primary;
+  color: $primary !important;
   background-color: $accent;
-  border: 1px solid;
-  i {
-    color: $primary;
-  }
+
 }
 
 
@@ -66,13 +63,6 @@ i,
 .featureBadges {
   color: $primary ;
 }
-
-
-
-
-
-
-
 
 p {
   color: #596b65;

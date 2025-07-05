@@ -13,15 +13,23 @@
 
 }
 
-.btn-md:hover {
-    .freeTrailBtn {
+.freeTrailBtn {
+    .freeTrailLink {
+        text-decoration: none;
+        color: $background;
+    }
+
+}
+
+.freeTrailBtn:hover {
+    .freeTrailLink {
         color: $primary !important;
     }
 }
 
 .exploreCoursesBtn {
     color: $primary;
-    background-color:$background;
+    background-color: $background;
     border: 1px solid $primary !important;
     font-weight: bolder;
 

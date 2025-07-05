@@ -10,7 +10,11 @@ export default function Header() {
         <div className="navigation d-flex align-items-center justify-content-between">
           <div className="logo">
             <h2 className="d-flex align-items-center mb-0">
-              <i className="ri-book-open-fill"></i>Arqam Quran Academy
+              <i
+                className="ri-book-open-fill"
+                style={{ fontSize: "2rem" }}
+              ></i>
+              Arqam Quran Academy
             </h2>
           </div>
           <div className="nav " id="navbar">
@@ -22,22 +26,34 @@ export default function Header() {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#about" aria-label="about page"> 
+                  <a className="nav-link" href="#about" aria-label="about page">
                     About
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#courses" aria-label="courses page ">
+                  <a
+                    className="nav-link"
+                    href="#courses"
+                    aria-label="courses page"
+                  >
                     Courses
                   </a>
                 </li>
                 <li className="nav-item">
-                  <Link to="/registration" className="nav-link" aria-label="registration page">
+                  <Link
+                    to="/registration"
+                    className="nav-link"
+                    aria-label="registration3 page"
+                  >
                     Regitration
                   </Link>
                 </li>
                 <li className="nav-item ">
-                  <a className="nav-link" href="#contact" aria-label="contact page">
+                  <a
+                    className="nav-link"
+                    href="#contact"
+                    aria-label="contact page"
+                  >
                     Contact
                   </a>
                 </li>

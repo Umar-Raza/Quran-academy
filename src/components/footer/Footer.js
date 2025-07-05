@@ -47,20 +47,26 @@ export default function Footer() {
               <p>Follow us on social media</p>
               <span>
                 {""}
-                <a href="facebook.com" aria-label="facebook link">
-                  <i className="ri-facebook-circle-line" alt></i>
+                <a
+                  href="https://www.facebook.com/arqamonlineacademy"
+                  aria-label="facebook link"
+                >
+                  <i className="ri-facebook-circle-line"></i>
                 </a>
               </span>
               <span>
                 {""}
-                <a href="instagram.com" aria-label="instagram link">
+                <a
+                  href="https://www.instagram.com/arqamquranacademy"
+                  aria-label="instagram link"
+                >
                   <i className="ri-instagram-line"></i>
                 </a>
               </span>
               <span>
                 {""}
                 <a
-                  href="https://api.whatsapp.com/send?phone=+923107029087"
+                  href="https://api.whatsapp.com/send?phone=+923270029087"
                   aria-label="whatsapp link"
                 >
                   <i className="ri-whatsapp-line"></i>
@@ -106,11 +112,8 @@ export default function Footer() {
               </p>
               <p>
                 Email:{" "}
-                <a
-                  href="mailto:arqamquraanacademy@gmail.com"
-                  aria-label="email"
-                >
-                  arqamquraanacademy@gmail.com
+                <a href="mailto:info.arqamacademy@gmail.com" aria-label="email">
+                  info.arqamacademy@gmail.com
                 </a>
               </p>
             </div>
@@ -122,7 +125,11 @@ export default function Footer() {
             <div className="policy">
               <p className=" m-0 text-center">
                 &copy;{year} All Rights reserved. Designed By{" "}
-                <a href="https://mu-portfolio.web.app/" target="blank" aria-label="portfolio link">
+                <a
+                  href="https://mu-portfolio.web.app/"
+                  target="blank"
+                  aria-label="portfolio link"
+                >
                   Muhammad Umar.
                 </a>
               </p>

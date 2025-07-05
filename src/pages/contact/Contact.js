@@ -157,10 +157,10 @@ export default function Contact() {
                         className="form-control"
                         placeholder="Subject"
                         name="subject"
-                        {...register("message", {
+                        {...register("subject", {
                           required: true,
                           minLength: 15,
-                          maxLength: 300,
+                          maxLength: 50,
                         })}
                       />
                       {errors.subject?.type === "required" && (
@@ -213,7 +213,7 @@ export default function Contact() {
                       <label>Message*</label>
                     </div>
                   </div>
-                  <div className="col-12 submit_btn">
+                  <div className="col-12 send_btn">
                     <button
                       className="btn w-50"
                       type="submit"
@@ -222,7 +222,7 @@ export default function Contact() {
                     >
                       {!isProcessing ? (
                         <span>
-                          Submit <i className="bi bi-send p-2"></i>
+                          Send <i className="bi bi-send p-2"></i>
                         </span>
                       ) : (
                         <div className="spinner spinner-grow spinner-grow-sm"></div>
@@ -261,7 +261,7 @@ export default function Contact() {
                 ))}
               </div>
 
-              <button className="registrationBtn btn-md px-4 py-3 fw-semibold rounded-3 border-0">
+              <button className="btn registerBtnd rounded-3 border-0">
                 <Link to="/registration" className="registerLink">
                   Register for Free Trial
                 </Link>

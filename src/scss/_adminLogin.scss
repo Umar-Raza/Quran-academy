@@ -2,9 +2,14 @@
     background-color: $secondary;
     height: 100vh;
 
+    .card {
+        // box-shadow: $primary 0px 1px 5px 0px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, $primary 0px 0px 0px 1px;
+    }
+
     .login-form {
-        width: 400px;
-        padding: 2rem 1rem 1rem;
+        // width: 400px;
+
 
 
         .card-title {
@@ -18,7 +23,7 @@
         }
 
         .backToHomeDiv {
-     
+
             .backToHomeLink:hover {
                 color: $primary;
                 text-decoration: underline;
@@ -29,4 +34,5 @@
     form {
         padding: 1rem;
     }
+
 }

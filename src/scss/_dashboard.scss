@@ -7,10 +7,9 @@
         color: $primary;
     }
 
-    .container-fluid {
+    .container {
         nav {
             width: 100%;
-
             .navbar-nav {
                 .nav-item {
                     .badgeButton {
@@ -25,13 +24,14 @@
         }
     }
 
-    .container-fluid {
+    .container {
         .navbar {
             background: $background;
 
             h2 {
                 color: $primary;
                 font-weight: bold;
+                text-align: center !important;
             }
 
             .navbar-nav {

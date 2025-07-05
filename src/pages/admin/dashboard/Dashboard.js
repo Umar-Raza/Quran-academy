@@ -253,23 +253,23 @@ export const Dashboard = () => {
 
   return (
     <div className="bgDashboard">
-      <div className="container-fluid m-0 p-0">
+      <div className="container-fluid">
         <div className="row">
-          <div className="col">
-            <nav className="navbar mb-2 px-0 navbar-expand-lg ">
-              <div className="container d-flex justify-content-center justify-content-md-between flex-wrap">
-                <h2 className="text-center mb-2 mb-md-0">Student Dashboard</h2>
+          <div className="col-12 px-0 mb-3 ">
+            <nav className="navbar navbar-expand-lg bg-body-tertiary d-flex justify-content-center align-items-center">
+              <div class="container">
+                <h2 className="text-center mb-sm-2">Student Dashboard</h2>
                 <ul className="navbar-nav flex-row">
-                  <li className="nav-item me-3 mb-2 mb-md-0">
-                    <button className="btn position-relative">
-                      Total Students
+                  <li className="nav-item me-3 mb-2 mb-md-0 ">
+                    <button className="btn btn-responsive-size position-relative">
+                      All Students
                       <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
                         {students.length}
                       </span>
                     </button>
                   </li>
                   <li className="nav-item mb-2 mb-md-0 me-3">
-                    <button type="button" className="btn position-relative">
+                    <button type="button" className="btn btn-responsive-size position-relative">
                       Today Registered
                       <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
                         {studentsToday.length}
@@ -279,7 +279,7 @@ export const Dashboard = () => {
                   <li className="nav-item mb-2 mb-md-0">
                     <button
                       type="button"
-                      className="btn position-relative"
+                      className="btn btn-responsive-size"
                       onClick={logout}
                     >
                       Logout
@@ -289,11 +289,10 @@ export const Dashboard = () => {
               </div>
             </nav>
           </div>
-        </div>
-        {/* Search and Filter Controls */}
-        <div className="d-flex justify-content-center align-items-center">
-          <div className="row mb-3 w-100">
-            <div className="col-12 d-flex justify-content-center align-items-center">
+          {/* Search and Filter Controls */}
+          <div className=" ">
+            {/* <div className="row mb-3 w-100"> */}
+            <div className="col-12 mb-3 d-flex justify-content-center align-items-center">
               <div className="card">
                 <div className="card-body">
                   <div className="row g-3 justify-content-center">
@@ -360,213 +359,212 @@ export const Dashboard = () => {
                 </div>
               </div>
             </div>
+            {/* </div> */}
           </div>
-        </div>
-        {/* Students Table */}
-        <div className="container-fluid ">
-          <div className="row">
-            <div className="col-12 d-flex justify-content-center align-items-center">
-              <div className="card">
-                <div className="card-header text-white">
-                  <div className="d-flex align-items-center justify-content-between">
-                    <div>
-                      <h5 className="mb-0">Registered Students</h5>
-                    </div>
-                    <small className="opacity-75">
-                      Real-time updates enabled
-                    </small>
+          {/* Students Table */}
+          {/* <div className="row"> */}
+          <div className="col-12 d-flex justify-content-center align-items-center">
+            <div className="card">
+              <div className="card-header text-white">
+                <div className="d-flex align-items-center justify-content-between">
+                  <div>
+                    <h5 className="mb-0">Registered Students</h5>
                   </div>
+                  <small className="opacity-75">
+                    Real-time updates enabled
+                  </small>
                 </div>
-                <div className="card-body p-0">
-                  <div className="table-responsive">
-                    <table className="table table-hover mb-0">
-                      <thead className="table-light">
+              </div>
+              <div className="card-body p-0">
+                <div className="table-responsive">
+                  <table className="table table-hover mb-0">
+                    <thead className="table-light">
+                      <tr>
+                        <th scope="col" style={{ width: "50px" }}>
+                          #
+                        </th>
+                        <th scope="col">Student Info</th>
+                        <th scope="col">Course</th>
+                        <th scope="col">Contact</th>
+                        <th scope="col">Registration Time</th>
+                        <th scope="col" style={{ width: "100px" }}>
+                          Actions
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {isLoading ? (
                         <tr>
-                          <th scope="col" style={{ width: "50px" }}>
-                            #
-                          </th>
-                          <th scope="col">Student Info</th>
-                          <th scope="col">Course</th>
-                          <th scope="col">Contact</th>
-                          <th scope="col">Registration Time</th>
-                          <th scope="col" style={{ width: "100px" }}>
-                            Actions
-                          </th>
+                          <td colSpan="6" className="text-center py-5 ">
+                            <div className="d-flex textAndLoader justify-content-center align-items-center">
+                              <div
+                                className="spinner-border me-3"
+                                role="status"
+                              ></div>
+                              <div>
+                                <h6 className="mb-1">Loading students...</h6>
+                              </div>
+                            </div>
+                          </td>
                         </tr>
-                      </thead>
-                      <tbody>
-                        {isLoading ? (
-                          <tr>
-                            <td colSpan="6" className="text-center py-5 ">
-                              <div className="d-flex textAndLoader justify-content-center align-items-center">
+                      ) : filteredStudents.length === 0 ? (
+                        <tr>
+                          <td
+                            colSpan="6"
+                            className="text-center py-5 text-muted"
+                          >
+                            <i className="bi bi-inbox display-1 d-block mb-3 opacity-50"></i>
+                            <h5>No students found</h5>
+                            <p className="mb-0">
+                              {searchTerm || selectedCourse
+                                ? "Try adjusting your search or filter criteria"
+                                : "No students have registered yet"}
+                            </p>
+                          </td>
+                        </tr>
+                      ) : (
+                        filteredStudents.map((student, index) => (
+                          <tr
+                            key={student.id}
+                            className={`${
+                              student.isNew
+                                ? "table-success border-start border-success border-4 animate__animated animate__pulse"
+                                : ""
+                            } ${
+                              isWithinLastHour(student.dateCreated)
+                                ? "table-warning"
+                                : ""
+                            }`}
+                          >
+                            <td>
+                              <div className="d-flex align-items-center">
+                                <span className="fw-bold">{index + 1}</span>
+                                {student.isNew && (
+                                  <span className="badge bg-success text-white ms-2 blink">
+                                    NEW!
+                                  </span>
+                                )}
+                                {isWithinLastHour(student.dateCreated) &&
+                                  !student.isNew && (
+                                    <span className="badge bg-warning text-dark ms-2">
+                                      RECENT
+                                    </span>
+                                  )}
+                              </div>
+                            </td>
+
+                            <td className="align-middle p-3 text-nowrap">
+                              <div className="studentInfo">
+                                <div className="fw-bold studentName">
+                                  {student.fullName}
+                                </div>
+                                <small className="text-muted">
+                                  <span className="fw-bold">Father:</span>{" "}
+                                  {student.fatherName}
+                                </small>
+                                <br />
+                                <small className="text-muted">
+                                  <span className="fw-bold"> DOB:</span>{" "}
+                                  {student.birthday}
+                                </small>
+                                <br />
+                                <small className="text-muted">
+                                  <span className="fw-bold">Gender:</span>{" "}
+                                  {student.gender}
+                                </small>
+                              </div>
+                            </td>
+                            <td className="align-middle p-3 text-nowrap">
+                              <div>
+                                <span className="badge bg-info text-dark fs-6 rounded-pill px-3 py-2 ">
+                                  {student.course}
+                                </span>
+                              </div>
+                            </td>
+                            <td className="align-middle p-3 text-nowrap">
+                              <div>
+                                <div className="small">
+                                  <i className="bi bi-envelope me-1"></i>
+                                  <a
+                                    href={`mailto:${student.email}`}
+                                    className="text-decoration-none"
+                                  >
+                                    {student.email}
+                                  </a>
+                                </div>
+                                <div className="small mt-1">
+                                  <i className="bi bi-whatsapp me-1"></i>
+                                  <a
+                                    href={`https://wa.me/${student.whatsAppNo}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-decoration-none text-success"
+                                  >
+                                    {student.whatsAppNo}
+                                  </a>
+                                </div>
                                 <div
-                                  className="spinner-border me-3"
-                                  role="status"
-                                ></div>
-                                <div>
-                                  <h6 className="mb-1">Loading students...</h6>
+                                  className="small mt-1 text-muted"
+                                  title={student.address}
+                                >
+                                  <i className="bi bi-geo-alt me-1"></i>
+                                  <span
+                                    className="text-truncate d-inline-block"
+                                    style={{ maxWidth: "150px" }}
+                                  >
+                                    {student.address}
+                                  </span>
                                 </div>
                               </div>
                             </td>
-                          </tr>
-                        ) : filteredStudents.length === 0 ? (
-                          <tr>
-                            <td
-                              colSpan="6"
-                              className="text-center py-5 text-muted"
-                            >
-                              <i className="bi bi-inbox display-1 d-block mb-3 opacity-50"></i>
-                              <h5>No students found</h5>
-                              <p className="mb-0">
-                                {searchTerm || selectedCourse
-                                  ? "Try adjusting your search or filter criteria"
-                                  : "No students have registered yet"}
-                              </p>
+
+                            <td className="align-middle p-3 text-nowrap">
+                              <div>
+                                <div className="fw-bold text-success">
+                                  {timeAgo(student.dateCreated)}
+                                </div>
+                                <small className="text-muted">
+                                  {formatDate(student.dateCreated)}
+                                </small>
+                              </div>
+                            </td>
+                            <td className="align-middle p-3 text-nowrap">
+                              <div className="d-flex justify-content-center align-items-center ">
+                                <button
+                                  className="btn btn-sm"
+                                  onClick={() => handleDelete(student)}
+                                  title={`Delete ${student.fullName}`}
+                                >
+                                  <i className="bi bi-trash"></i>
+                                </button>
+                              </div>
                             </td>
                           </tr>
-                        ) : (
-                          filteredStudents.map((student, index) => (
-                            <tr
-                              key={student.id}
-                              className={`${
-                                student.isNew
-                                  ? "table-success border-start border-success border-4 animate__animated animate__pulse"
-                                  : ""
-                              } ${
-                                isWithinLastHour(student.dateCreated)
-                                  ? "table-warning"
-                                  : ""
-                              }`}
-                            >
-                              <td>
-                                <div className="d-flex align-items-center">
-                                  <span className="fw-bold">{index + 1}</span>
-                                  {student.isNew && (
-                                    <span className="badge bg-success text-white ms-2 blink">
-                                      NEW!
-                                    </span>
-                                  )}
-                                  {isWithinLastHour(student.dateCreated) &&
-                                    !student.isNew && (
-                                      <span className="badge bg-warning text-dark ms-2">
-                                        RECENT
-                                      </span>
-                                    )}
-                                </div>
-                              </td>
-
-                              <td className="align-middle p-3 text-nowrap">
-                                <div className="studentInfo">
-                                  <div className="fw-bold studentName">
-                                    {student.fullName}
-                                  </div>
-                                  <small className="text-muted">
-                                    <span className="fw-bold">Father:</span>{" "}
-                                    {student.fatherName}
-                                  </small>
-                                  <br />
-                                  <small className="text-muted">
-                                    <span className="fw-bold"> DOB:</span>{" "}
-                                    {student.birthday}
-                                  </small>
-                                  <br />
-                                  <small className="text-muted">
-                                    <span className="fw-bold">Gender:</span>{" "}
-                                    {student.gender}
-                                  </small>
-                                </div>
-                              </td>
-                              <td className="align-middle p-3 text-nowrap">
-                                <div>
-                                  <span className="badge bg-info text-dark fs-6 rounded-pill px-3 py-2 ">
-                                    {student.course}
-                                  </span>
-                                </div>
-                              </td>
-                              <td className="align-middle p-3 text-nowrap">
-                                <div>
-                                  <div className="small">
-                                    <i className="bi bi-envelope me-1"></i>
-                                    <a
-                                      href={`mailto:${student.email}`}
-                                      className="text-decoration-none"
-                                    >
-                                      {student.email}
-                                    </a>
-                                  </div>
-                                  <div className="small mt-1">
-                                    <i className="bi bi-whatsapp me-1"></i>
-                                    <a
-                                      href={`https://wa.me/${student.whatsAppNo}`}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      className="text-decoration-none text-success"
-                                    >
-                                      {student.whatsAppNo}
-                                    </a>
-                                  </div>
-                                  <div
-                                    className="small mt-1 text-muted"
-                                    title={student.address}
-                                  >
-                                    <i className="bi bi-geo-alt me-1"></i>
-                                    <span
-                                      className="text-truncate d-inline-block"
-                                      style={{ maxWidth: "150px" }}
-                                    >
-                                      {student.address}
-                                    </span>
-                                  </div>
-                                </div>
-                              </td>
-
-                              <td className="align-middle p-3 text-nowrap">
-                                <div>
-                                  <div className="fw-bold text-success">
-                                    {timeAgo(student.dateCreated)}
-                                  </div>
-                                  <small className="text-muted">
-                                    {formatDate(student.dateCreated)}
-                                  </small>
-                                </div>
-                              </td>
-                              <td className="align-middle p-3 text-nowrap">
-                                <div className="d-flex justify-content-center align-items-center ">
-                                  <button
-                                    className="btn btn-sm"
-                                    onClick={() => handleDelete(student)}
-                                    title={`Delete ${student.fullName}`}
-                                  >
-                                    <i className="bi bi-trash"></i>
-                                  </button>
-                                </div>
-                              </td>
-                            </tr>
-                          ))
-                        )}
-                      </tbody>
-                    </table>
+                        ))
+                      )}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              {filteredStudents.length > 0 && (
+                <div className="card-footer bg-light">
+                  <div className="d-flex justify-content-between align-items-center">
+                    <small className="text-muted">
+                      Total: {filteredStudents.length} student
+                      {filteredStudents.length !== 1 ? "s" : ""}
+                    </small>
+                    <small className="text-muted">
+                      <i className="bi bi-clock me-1"></i>
+                      Last updated: {lastUpdate.toLocaleTimeString()}
+                    </small>
                   </div>
                 </div>
-                {filteredStudents.length > 0 && (
-                  <div className="card-footer bg-light">
-                    <div className="d-flex justify-content-between align-items-center">
-                      <small className="text-muted">
-                        Total: {filteredStudents.length} student
-                        {filteredStudents.length !== 1 ? "s" : ""}
-                      </small>
-                      <small className="text-muted">
-                        <i className="bi bi-clock me-1"></i>
-                        Last updated: {lastUpdate.toLocaleTimeString()}
-                      </small>
-                    </div>
-                  </div>
-                )}
-              </div>
+              )}
             </div>
           </div>
         </div>
       </div>
+      {/* </div> */}
     </div>
   );
 };

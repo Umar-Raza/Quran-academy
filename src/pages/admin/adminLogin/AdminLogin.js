@@ -11,7 +11,7 @@ export const AdminLogin = () => {
 
   const login = async (e) => {
     e.preventDefault();
-    
+
     if (!email || !password) {
       return window.toastify("All fields Required!");
     }
@@ -30,14 +30,13 @@ export const AdminLogin = () => {
     }
     setIsLoading(false);
   };
-
   return (
     <div className="bgLogin">
       <div className="container d-flex align-items-center justify-content-center h-100">
         <div className="row">
-          <div className="col d-flex align-items-center justify-content-center">
-            <div className="wrapper ">
-              <div className="card login-form">
+          <div className="col">
+            <div className="card w-100 ">
+              <div className=" login-form">
                 <div className="card-body">
                   <h5 className="card-title text-center ">Login Form</h5>
                   <form>
@@ -49,7 +48,8 @@ export const AdminLogin = () => {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         className="form-control"
-                        placeholder="example@gmail.com "
+                        placeholder="example@gmail.com"
+                        form
                       />
                     </div>
                     <div className="mb-3">
@@ -63,7 +63,12 @@ export const AdminLogin = () => {
                         placeholder="password"
                       />
                     </div>
-                    <button type="submit" onClick={login} className="btn w-100">
+                    <button
+                      type="submit"
+                      onClick={login}
+                      className="btn w-100"
+                      disabled={isLoading}
+                    >
                       {!isLoading ? (
                         <span>login</span>
                       ) : (

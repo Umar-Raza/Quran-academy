@@ -16,7 +16,7 @@
 
             .form-control:focus {
                 border-color: $primary;
-                box-shadow: 0 0 0 0.1rem $accent;
+                box-shadow: 0 0 0 0.1rem $primary;
             }
 
             .error-msg {
@@ -26,11 +26,17 @@
             }
         }
 
-        .submit_btn {
+        .send_btn {
             display: flex;
             align-items: center;
             justify-content: center !important;
             margin: 2rem 0 2rem;
+        }
+
+        .send_btn:hover {
+            i {
+                color: $primary;
+            }
         }
     }
 
@@ -41,9 +47,7 @@
     color: $primary !important;
 }
 
-.subHeading {
-    // color: $accent !important;
-}
+
 
 .checkRoundedCircle {
     width: 24px;
@@ -57,17 +61,7 @@
 }
 
 
-.registrationBtn {
-    color: $background;
-    background-color: $primary;
-
-}
-
-.registrationBtn:hover {
-    color: red !important;
+.registerBtn:hover {
+    color: $primary !important;
     background-color: $accent !important;
 }
-
-// .form-floating {
-//     margin-bottom: 1rem;
-// }
