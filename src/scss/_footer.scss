@@ -1,5 +1,5 @@
 footer {
-   
+
     h2,
     h6 {
         font-size: 23px;
@@ -14,7 +14,7 @@ footer {
             margin-top: 0 !important;
 
             i {
-                font-size: 1.3rem;
+                font-size: 1.8rem;
             }
         }
     }
@@ -42,6 +42,10 @@ footer {
         a {
             text-decoration: none;
             color: #0a2b1e;
+        }
+
+        a:hover {
+            color: $primary;
         }
     }
 
@@ -72,4 +76,16 @@ footer {
             }
         }
     }
+}
+
+// .chatHeader .avatar img {
+//     vertical-align: middle;
+//     border-radius: 50%;
+//     height: 30px;
+//     width: 30px;
+//     border: 1px solid rgba(255, 255, 255, 0.473);
+// }
+.statusTitle {
+    font-size: 12rem;
+    font-weight: 700;
 }

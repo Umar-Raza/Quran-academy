@@ -1,6 +1,5 @@
 import React from "react";
-import { Col, Container, Row, ListGroup, ListGroupItem } from "react-bootstrap";
-
+import { Whatsapp } from "../whatsapp/Whatsapp";
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -37,9 +36,9 @@ export default function Footer() {
 
   return (
     <footer className="footer">
-      <Container>
-        <Row>
-          <Col lg="4">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-4">
             <h2 className="d-flex align-items-center gap-1">
               <i className="ri-book-open-fill"></i>Arqam Quran academy.
             </h2>
@@ -73,55 +72,56 @@ export default function Footer() {
                 </a>
               </span>
             </div>
-          </Col>
-          <Col lg="2">
+          </div>
+          <div className="col-lg-2">
             <h6>Explore</h6>
-            <ListGroup className="list_group">
+            <ul className="list_group p-0">
               {FooterQuickLink.map((item, index) => (
-                <ListGroupItem
+                <li
                   key={index}
-                  className="border-0 bold ps-0 list_link"
+                  className="list-group-item mb-3 ms-0 bold ps-0 list_link"
                 >
-                  {""}
                   <a className="explore-link" href={item}>
                     {item.display}
                   </a>
-                </ListGroupItem>
+                </li>
               ))}
-            </ListGroup>
-          </Col>
-          <Col lg="2">
+            </ul>
+          </div>
+          <div className="col-lg-2">
             <h6>Information</h6>
-            <ListGroup>
+            <ul className="list-group">
               {FooterInfoLinks.map((item, index) => (
-                <ListGroupItem key={index} className="border-0 ps-0 list_link">
-                  {""}
+                <li
+                  key={index}
+                  className="list-group-item border-0 ps-0 list_link"
+                >
                   <p roll={item.url} aria-disabled="true">
                     {item.display}
                   </p>
-                </ListGroupItem>
+                </li>
               ))}
-            </ListGroup>
-          </Col>
-          <Col lg="4">
+            </ul>
+          </div>
+          <div className="col-lg-4">
             <h6>Get in touch</h6>
             <div className="get_in_touch">
               <p className="m-0">Faisalabad Punjab Pakistan</p>
               <p className="m-0">
-                Phone: <a href="tel:+923270029087">+923270029087</a>
+                Phone: <a href="tel:+923270029087" aria-label="phone">+923270029087</a>
               </p>
               <p>
-                Email:{" "}
+                Email:
                 <a href="mailto:info.arqamacademy@gmail.com" aria-label="email">
                   info.arqamacademy@gmail.com
                 </a>
               </p>
             </div>
-          </Col>
-        </Row>
-        <Row>
+          </div>
+        </div>
+        <div className="row">
           <hr className="mt-3" />
-          <Col lg="12">
+          <div className="col-lg-12">
             <div className="policy">
               <p className=" m-0 text-center">
                 &copy;{year} All Rights reserved. Designed By{" "}
@@ -134,9 +134,10 @@ export default function Footer() {
                 </a>
               </p>
             </div>
-          </Col>
-        </Row>
-      </Container>
+          </div>
+          <Whatsapp/>
+        </div>
+      </div>
     </footer>
   );
 }

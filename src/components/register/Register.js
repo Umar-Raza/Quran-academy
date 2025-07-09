@@ -231,7 +231,6 @@ export default function Register() {
 
                     <div className="col-12 col-md-6">
                       <div className="input-group">
-                        {/* Country Code Dropdown */}
                         <div
                           className="form-floating"
                           style={{ flex: "none", width: "auto" }}

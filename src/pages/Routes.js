@@ -5,6 +5,7 @@ import Register from "../components/register/Register";
 import { Dashboard } from "./admin/dashboard/Dashboard";
 import { AdminLogin } from "./admin/adminLogin/AdminLogin";
 import { NoPage } from "./noPage/NoPage";
+import { Whatsapp } from "../components/whatsapp/Whatsapp";
 export default function Index() {
   return (
     <>
@@ -28,7 +29,7 @@ export default function Index() {
 
 export const ProtectedRouteForAdmin = ({ children }) => {
   const admin = JSON.parse(localStorage.getItem("admin"));
-  if (admin?.user?.email === "arqamquranacademy@gmail.com") {
+  if (admin?.user?.email === "info.arqamquranacademy@gmail.com") {
     return children;
   } else {
     return <Navigate to={"/adminLogin"} />;
