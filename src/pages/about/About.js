@@ -38,12 +38,8 @@ export default function About() {
               </h2>
 
               <p className="text-muted mb-4">
-                Our Academy is a premier institution dedicated to providing
-                high-quality Quranic education to students worldwide. Founded in
-                2022 in Pakistan, we have quickly established ourselves as a
-                leading online Islamic academy.
+                Arqam Quran Academy is a premier institution dedicated to providing high-quality Quranic education to students worldwide. Founded in 2023 in Pakistan by <strong >Mufti Muhammad Umar Madni</strong>, who serves as its CEO and Founder, we have quickly established ourselves as a leading online Islamic academy.
               </p>
-
               <p className="text-muted mb-4" style={{ lineHeight: "1.7" }}>
                 Our academy offers comprehensive courses in Quran recitation
                 with Tajweed, Hifz ul Quran (memorization), Namaz & Kalmas,

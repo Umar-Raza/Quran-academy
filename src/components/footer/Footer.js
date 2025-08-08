@@ -106,14 +106,14 @@ export default function Footer() {
           <div className="col-lg-4">
             <h6>Get in touch</h6>
             <div className="get_in_touch">
-              <p className="m-0">Faisalabad Punjab Pakistan</p>
+              <p className="m-0">Faisalabad, Punjab Pakistan</p>
               <p className="m-0">
                 Phone: <a href="tel:+923270029087" aria-label="phone">+923270029087</a>
               </p>
               <p>
                 Email:
-                <a href="mailto:info.arqamacademy@gmail.com" aria-label="email">
-                  info.arqamacademy@gmail.com
+                 <a href="mailto:umardev92@gmail.com" className="mx-1" aria-label="email"> 
+                   umardev92@gmail.com
                 </a>
               </p>
             </div>
